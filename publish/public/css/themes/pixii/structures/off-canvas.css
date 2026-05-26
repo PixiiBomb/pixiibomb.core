@@ -1,0 +1,143 @@
+/* =========================================================
+   PIXII OFFCANVAS
+   Magical storybook drawer overrides
+   ========================================================= */
+
+.offcanvas {
+    position: relative !important;
+    isolation: isolate !important;
+
+    background:
+        radial-gradient(
+            circle at 96% 92%,
+            color-mix(in srgb, var(--color-primary) 12%, transparent) 0%,
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 10% 8%,
+            color-mix(in srgb, white 18%, transparent) 0%,
+            transparent 28%
+        ),
+        var(--color-bg-secondary) !important;
+
+    box-shadow:
+        inset 0 1px 0 color-mix(in srgb, white 32%, transparent),
+        var(--shadow-md) !important;
+}
+
+.offcanvas::before {
+    content: "✿";
+    position: absolute;
+    right: -0.8rem;
+    bottom: -1.1rem;
+    z-index: -1;
+
+    color: color-mix(in srgb, var(--color-primary) 16%, transparent);
+    font-size: 5rem;
+
+    opacity: 0.36;
+    transform: rotate(-18deg);
+    pointer-events: none;
+}
+
+.offcanvas::after {
+    content: "✧";
+    position: absolute;
+    top: var(--padding-lg);
+    right: calc(var(--padding-xl) * 2.5);
+
+    color: color-mix(in srgb, white 72%, transparent);
+    font-size: 1rem;
+
+    opacity: 0.85;
+    pointer-events: none;
+}
+
+.offcanvas-backdrop {
+    background:
+        radial-gradient(
+            circle at 50% 42%,
+            color-mix(in srgb, var(--color-primary) 24%, transparent) 0%,
+            transparent 36%
+        ),
+        color-mix(in srgb, black 68%, var(--color-bg-primary) 32%) !important;
+}
+
+.offcanvas-backdrop.show {
+    opacity: 0.7 !important;
+}
+
+.offcanvas-header {
+    background:
+        radial-gradient(
+            circle at 94% 90%,
+            color-mix(in srgb, var(--color-primary) 10%, transparent) 0%,
+            transparent 30%
+        ),
+        var(--color-accent) !important;
+}
+
+.offcanvas-title {
+    font-weight: 900 !important;
+    letter-spacing: -0.015em !important;
+}
+
+.offcanvas-title::after {
+    content: " ✧";
+    color: var(--color-primary);
+}
+
+.offcanvas .btn-close {
+    opacity: 0.68 !important;
+}
+
+.offcanvas .btn-close:hover {
+    background-color: color-mix(in srgb, var(--color-primary) 14%, transparent) !important;
+}
+
+.offcanvas-menu a {
+    border-radius: var(--radius-round);
+    font-weight: 800;
+}
+
+.offcanvas-menu a:hover,
+.offcanvas-menu a:focus {
+    background:
+        radial-gradient(
+            circle at 92% 88%,
+            color-mix(in srgb, var(--color-primary) 14%, transparent) 0%,
+            transparent 30%
+        ),
+        var(--color-accent);
+}
+
+.offcanvas-menu a.active {
+    background: var(--gradient-primary);
+}
+
+.offcanvas-menu a.active::after {
+    content: " ✧";
+}
+
+.offcanvas-card {
+    position: relative;
+    isolation: isolate;
+
+    background:
+        radial-gradient(
+            circle at 96% 92%,
+            color-mix(in srgb, var(--color-primary) 10%, transparent) 0%,
+            transparent 32%
+        ),
+        var(--color-accent);
+
+    border-radius: var(--radius-lg);
+
+    box-shadow:
+        inset 0 1px 0 color-mix(in srgb, white 30%, transparent),
+        var(--shadow-sm);
+}
+
+.offcanvas-card strong {
+    font-weight: 900;
+}

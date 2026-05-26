@@ -1,0 +1,85 @@
+/* =========================================================
+   BASE TABLES
+   Modern product UI tables
+   ========================================================= */
+
+.table-responsive {
+    overflow: auto !important;
+    background: var(--color-bg-secondary) !important;
+    border: 1px solid var(--color-border-primary) !important;
+    border-radius: var(--radius-md) !important;
+    box-shadow: var(--shadow-sm) !important;
+}
+
+.table {
+    margin-bottom: 0 !important;
+    --bs-table-color: var(--color-text-primary)!important;
+    --bs-table-bg: var(--color-bg-secondary)!important;
+    --bs-table-border-color: var(--color-border-primary)!important;
+    --bs-table-striped-color: var(--color-text-primary)!important;
+    --bs-table-striped-bg: color-mix(in srgb, var(--color-bg-variant) 64%, transparent)!important;
+    --bs-table-hover-color: var(--color-text-primary)!important;
+    --bs-table-hover-bg: color-mix(in srgb, var(--color-primary) 10%, transparent)!important;
+}
+
+.table th,
+.table td {
+    padding: var(--padding-md) var(--padding-lg) !important;
+    color: var(--color-text-primary) !important;
+    border-color: var(--color-border-primary) !important;
+    vertical-align: middle !important;
+}
+
+.table thead th {
+    color: var(--color-text-secondary) !important;
+    background: var(--color-bg-variant) !important;
+    font-size: var(--font-xs) !important;
+    font-weight: 850 !important;
+    letter-spacing: 0.05em !important;
+    text-transform: uppercase !important;
+    border-bottom: 1px solid var(--color-border-primary) !important;
+}
+
+.table tbody td {
+    font-size: var(--font-sm) !important;
+    font-weight: 600 !important;
+}
+
+.table-sm th,
+.table-sm td {
+    padding: var(--padding-sm) var(--padding-md) !important;
+}
+
+.table-bordered {
+    border-color: var(--color-border-primary) !important;
+}
+
+.table-primary {
+    --bs-table-color: var(--color-text-on-primary)!important;
+    --bs-table-bg: var(--color-primary)!important;
+    --bs-table-border-color: var(--color-primary-60)!important;
+}
+
+.table-success {
+    --bs-table-color: var(--color-text-on-success)!important;
+    --bs-table-bg: var(--color-success)!important;
+    --bs-table-border-color: var(--color-success-60)!important;
+}
+
+.table-warning {
+    --bs-table-color: var(--color-text-on-caution)!important;
+    --bs-table-bg: var(--color-caution)!important;
+    --bs-table-border-color: var(--color-caution-60)!important;
+}
+
+.table-danger {
+    --bs-table-color: var(--color-text-on-danger)!important;
+    --bs-table-bg: var(--color-danger)!important;
+    --bs-table-border-color: var(--color-danger-60)!important;
+}
+
+.table-info {
+    --bs-table-color: var(--color-text-on-note)!important;
+    --bs-table-bg: var(--color-note)!important;
+    --bs-table-border-color: var(--color-note-60)!important;
+}

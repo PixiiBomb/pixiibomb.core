@@ -1,0 +1,98 @@
+/* =========================================================
+   MOONMOTH
+   Pixii Dark Palette
+   Ethereal fantasy twilight palette
+   ========================================================= */
+
+:root {
+    /* =========================================================
+       BACKGROUNDS
+       ========================================================= */
+
+    --color-bg-primary: #221c28;
+    --color-bg-secondary: #2b2433;
+    --color-bg-variant: #342c3d;
+
+    --color-bg: var(--color-bg-primary);
+
+    /* =========================================================
+       TEXT
+       ========================================================= */
+
+    --color-text-primary: #f3eaf1;
+    --color-text-secondary: #d8c8d2;
+    --color-text-accent: #f2bfd2;
+    --color-text-variant: #bca9b6;
+    --color-text-muted: #8e7e89;
+
+    /* =========================================================
+       TEXT ON COLORS
+       ========================================================= */
+
+    --color-text-on-primary: #ffffff;
+    --color-text-on-secondary: #ffffff;
+    --color-text-on-accent: #ffffff;
+    --color-text-on-variant: #ffffff;
+
+    --color-text-on-success: #ffffff;
+    --color-text-on-danger: #ffffff;
+    --color-text-on-caution: #433a28;
+    --color-text-on-note: #ffffff;
+
+    --color-text-on-light: #43384a;
+    --color-text-on-dark: #ffffff;
+
+    /* =========================================================
+       BORDERS
+       ========================================================= */
+
+    --color-border-primary: #4a3f53;
+    --color-border-secondary: #584a61;
+    --color-border-accent: #6a5872;
+    --color-border-variant: #52475b;
+
+    /* =========================================================
+       SEMANTIC / INTERACTIVE
+       ========================================================= */
+
+    /* Moonlit rose */
+    --color-primary: #d7a7bc;
+
+    /* Dusky sage */
+    --color-secondary: #8fa091;
+
+    /* Velvet lavender */
+    --color-accent: #413748;
+
+    /* Twilight parchment */
+    --color-variant: #352d3d;
+
+    /* =========================================================
+       STATUS COLORS
+       ========================================================= */
+
+    --color-success: #6d8f74;
+    --color-danger: #c97b92;
+    --color-caution: #d6bb7a;
+    --color-note: #879fd9;
+
+    /* =========================================================
+       EFFECTS
+       ========================================================= */
+
+    --shadow-sm: 0 10px 24px rgba(14, 10, 18, 0.32);
+    --shadow-md: 0 18px 50px rgba(8, 6, 12, 0.40);
+
+    --blur-sm: 10px;
+    --blur-md: 14px;
+
+    /* =========================================================
+       GLASS SURFACES
+       ========================================================= */
+
+    --surface-glass: rgba(43, 36, 51, 0.82);
+    --surface-glass-soft: rgba(52, 44, 61, 0.74);
+    --surface-glass-strong: rgba(34, 28, 40, 0.92);
+
+    --border-glass: rgba(106, 88, 114, 0.48);
+}

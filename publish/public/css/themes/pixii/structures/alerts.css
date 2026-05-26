@@ -1,0 +1,192 @@
+/* =========================================================
+   PIXII ALERTS
+   Magical storybook alert overrides
+   ========================================================= */
+
+.alert {
+    isolation: isolate !important;
+    overflow: hidden !important;
+
+    padding: var(--padding-lg) calc(var(--padding-xl) * 1.5) var(--padding-lg) calc(var(--padding-xl) * 3.25) !important;
+
+    border-radius: var(--radius-lg) !important;
+
+    box-shadow:
+        inset 0 1px 0 color-mix(in srgb, white 36%, transparent),
+        var(--shadow-sm) !important;
+}
+
+.alert::before {
+    position: absolute;
+    left: -0.35rem;
+    top: 50%;
+    z-index: -1;
+
+    font-size: 4.2rem;
+    line-height: 1;
+
+    opacity: 0.24;
+    transform: translateY(-50%) rotate(-12deg);
+
+    pointer-events: none;
+}
+
+.alert::after {
+    content: "✧";
+    position: absolute;
+    top: var(--padding-md);
+    right: var(--padding-lg);
+
+    color: color-mix(in srgb, white 70%, transparent);
+    font-size: 1rem;
+
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+.alert-dismissible {
+    padding-right: calc(var(--padding-xl) * 2.35) !important;
+}
+
+.alert-dismissible::after {
+    content: "";
+}
+
+.alert .btn-close {
+    top: var(--padding-lg) !important;
+    transform: none !important;
+}
+
+.alert-primary::before {
+    content: "✨";
+    color: var(--color-primary-80);
+}
+
+.alert-primary {
+    color: var(--color-text-on-dark) !important;
+    background:
+        radial-gradient(
+            circle at 90% 88%,
+            color-mix(in srgb, var(--color-primary) 16%, transparent) 0%,
+            transparent 32%
+        ),
+        color-mix(in srgb, black 20%, var(--color-bg-primary) 80%) !important;
+    border-color: color-mix(in srgb, var(--color-border-primary) 68%, white 12%) !important;
+}
+
+.alert-secondary::before {
+    content: "🌸";
+    color: var(--color-text-muted);
+}
+
+.alert-secondary {
+    color: var(--color-text-on-dark) !important;
+    background:
+        radial-gradient(
+            circle at 90% 88%,
+            color-mix(in srgb, var(--color-secondary) 16%, transparent) 0%,
+            transparent 32%
+        ),
+        color-mix(in srgb, black 20%, var(--color-bg-secondary) 80%) !important;
+    border-color: color-mix(in srgb, var(--color-border-secondary) 68%, white 12%) !important;
+}
+
+.alert-success::before {
+    content: "✅";
+    color: var(--color-success-80);
+}
+
+.alert-success {
+    background:
+        radial-gradient(
+            circle at 90% 88%,
+            color-mix(in srgb, var(--color-success) 16%, transparent) 0%,
+            transparent 32%
+        ),
+        color-mix(in srgb, black 20%, var(--color-bg-secondary) 80%) !important;
+    border-color: color-mix(in srgb, var(--color-success) 68%, white 12%) !important;
+}
+
+.alert-danger::before {
+    content: "💣";
+    color: var(--color-danger-80);
+    font-weight: 900;
+}
+
+.alert-danger {
+    color: var(--color-text-primary) !important;
+    background:
+        radial-gradient(
+            circle at 90% 88%,
+            color-mix(in srgb, var(--color-danger) 16%, transparent) 0%,
+            transparent 32%
+        ),
+        color-mix(in srgb, black 20%, var(--color-bg-secondary) 80%) !important;
+    border-color: color-mix(in srgb, var(--color-danger) 68%, white 12%) !important;
+}
+
+.alert-warning::before {
+    content: "⚠️";
+    color: var(--color-caution-80);
+}
+
+.alert-warning {
+    background:
+        radial-gradient(
+            circle at 90% 88%,
+            color-mix(in srgb, var(--color-caution) 16%, transparent) 0%,
+            transparent 32%
+        ),
+        color-mix(in srgb, black 20%, var(--color-bg-secondary) 80%) !important;
+    border-color: color-mix(in srgb, var(--color-caution) 68%, white 12%) !important;
+}
+
+.alert-info::before {
+    content: "ℹ️";
+    color: var(--color-note-80);
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-weight: 900;
+}
+
+.alert-info {
+    background:
+        radial-gradient(
+            circle at 90% 88%,
+            color-mix(in srgb, var(--color-note) 16%, transparent) 0%,
+            transparent 32%
+        ),
+        color-mix(in srgb, black 20%, var(--color-bg-secondary) 80%) !important;
+    border-color: color-mix(in srgb, var(--color-note) 68%, white 12%) !important;
+}
+
+.alert-light::before {
+    content: "🌞";
+    color: var(--color-text-muted);
+}
+
+.alert-light {
+    background:
+        radial-gradient(
+            circle at 94% 88%,
+            color-mix(in srgb, var(--color-primary) 10%, transparent) 0%,
+            transparent 30%
+        ),
+        var(--color-bg-secondary) !important;
+}
+
+.alert-dark::before {
+    content: "🌛";
+    color: var(--color-primary-20);
+}
+
+.alert-dark {
+    background:
+        radial-gradient(
+            circle at 90% 88%,
+            color-mix(in srgb, var(--color-primary) 16%, transparent) 0%,
+            transparent 32%
+        ),
+        color-mix(in srgb, black 20%, var(--color-bg-primary) 80%) !important;
+    border-color: color-mix(in srgb, var(--color-border-primary) 68%, white 12%) !important;
+}

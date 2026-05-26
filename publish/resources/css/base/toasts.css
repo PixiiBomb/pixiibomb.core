@@ -1,0 +1,110 @@
+/* =========================================================
+   BASE TOASTS
+   Modern product UI toasts
+   ========================================================= */
+
+.toast-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-md);
+}
+
+.toast {
+    width: min(100%, 420px) !important;
+    color: var(--color-text-primary) !important;
+    background: color-mix(in srgb, var(--color-bg-secondary) 94%, transparent) !important;
+    border: 1px solid var(--color-border-primary) !important;
+    border-radius: var(--radius-md) !important;
+    box-shadow: var(--shadow-md) !important;
+    backdrop-filter: blur(var(--blur-sm));
+}
+
+.toast-header {
+    padding: var(--padding-md) var(--padding-lg) !important;
+    color: var(--color-text-primary) !important;
+    background: var(--color-bg-secondary) !important;
+    border-bottom: 1px solid var(--color-border-primary) !important;
+}
+
+.toast-header strong {
+    color: var(--color-text-primary);
+    font-weight: 850;
+}
+
+.toast-header small {
+    color: var(--color-text-muted);
+    font-weight: 700;
+}
+
+.toast-body {
+    padding: var(--padding-lg) !important;
+    color: var(--color-text-secondary) !important;
+    font-size: var(--font-sm) !important;
+    line-height: 1.5 !important;
+}
+
+.toast-dot {
+    display: inline-block;
+    width: 0.65rem;
+    height: 0.65rem;
+    margin-right: var(--padding-sm);
+    background: var(--color-primary);
+    border-radius: var(--radius-round);
+}
+
+.toast-success .toast-dot {
+    background: var(--color-success);
+}
+
+.toast-warning .toast-dot {
+    background: var(--color-caution);
+}
+
+.toast-danger .toast-dot {
+    background: var(--color-danger);
+}
+
+.toast .btn-close {
+    border-radius: var(--radius-round) !important;
+    opacity: 0.65 !important;
+}
+
+.toast .btn-close:hover {
+    opacity: 1 !important;
+    background-color: var(--color-bg-variant) !important;
+}
+
+.modern-toast .toast-body {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--padding-md);
+    color: var(--color-text-primary) !important;
+}
+
+.toast-icon {
+    display: grid;
+    flex: 0 0 auto;
+    width: 2rem;
+    height: 2rem;
+    place-items: center;
+    color: var(--color-text-on-success);
+    background: var(--color-success);
+    border-radius: var(--radius-round);
+    font-weight: 850;
+}
+
+.toast-copy {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    gap: var(--padding-xs);
+}
+
+.toast-copy strong {
+    color: var(--color-text-primary);
+    font-weight: 850;
+}
+
+.toast-copy span {
+    color: var(--color-text-secondary);
+}

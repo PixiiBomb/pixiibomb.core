@@ -1,0 +1,31 @@
+{
+    "name": "pixiibomb/core",
+    "description": "A standard package for all PixiiBomb projects.",
+    "type": "library",
+    "license": "proprietary",
+    "require": {
+        "php": "^8.4",
+        "laravel/sanctum": "^4.0",
+        "opis/json-schema": "^2.0"
+    },
+    "authors": [
+        {
+            "name": "PixiiBomb",
+            "email": "pixii@pixiibomb.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "PixiiBomb\\Core\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "PixiiBomb\\Core\\PixiiBombCoreServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

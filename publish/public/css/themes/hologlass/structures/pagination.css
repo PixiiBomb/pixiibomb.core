@@ -1,0 +1,188 @@
+/* =========================================================
+   HOLOGLASS PAGINATION
+   Futuristic glassmorphism pagination overrides
+   ========================================================= */
+
+.page-link {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    min-width: 2.45rem;
+    min-height: 2.45rem;
+
+    background:
+        var(--gradient-hologlass),
+        var(--surface-glass-soft) !important;
+
+    border-color: var(--border-glass) !important;
+    border-radius: var(--radius-round) !important;
+
+    font-weight: 800 !important;
+
+    box-shadow:
+        inset 0 1px 0 color-mix(in srgb, white 22%, transparent),
+        var(--shadow-sm) !important;
+
+    backdrop-filter: blur(var(--blur-sm));
+
+    transition:
+        color 0.16s ease,
+        background 0.16s ease,
+        border-color 0.16s ease,
+        transform 0.16s ease,
+        box-shadow 0.16s ease !important;
+}
+
+.page-link::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    background:
+        radial-gradient(
+            circle at 90% 18%,
+            color-mix(in srgb, var(--color-primary) 24%, transparent) 0%,
+            transparent 34%
+        ),
+        radial-gradient(
+            circle at 12% 84%,
+            color-mix(in srgb, var(--color-secondary) 14%, transparent) 0%,
+            transparent 36%
+        );
+
+    opacity: 0;
+    transition: opacity 0.16s ease;
+    pointer-events: none;
+}
+
+.page-link:hover,
+.page-link:focus {
+    color: var(--color-text-primary) !important;
+
+    background:
+        var(--gradient-hologram),
+        var(--surface-glass-strong) !important;
+
+    border-color: var(--color-border-accent) !important;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        inset 0 1px 0 color-mix(in srgb, white 28%, transparent),
+        var(--shadow-md),
+        var(--glow-primary) !important;
+}
+
+.page-link:hover::before,
+.page-link:focus::before {
+    opacity: 1;
+}
+
+.page-link:focus {
+    box-shadow:
+        var(--shadow-sm),
+        0 0 0 3px color-mix(in srgb, var(--color-primary) 28%, transparent),
+        var(--glow-primary) !important;
+}
+
+.page-item.active .page-link {
+    color: var(--color-text-on-primary) !important;
+    background: var(--gradient-primary) !important;
+    border-color: color-mix(in srgb, var(--color-primary) 72%, white 18%) !important;
+
+    box-shadow:
+        inset 0 1px 0 color-mix(in srgb, white 32%, transparent),
+        var(--shadow-sm),
+        var(--glow-primary) !important;
+}
+
+.page-item.active .page-link::after {
+    content: "∕";
+    margin-left: 0.2rem;
+    color: color-mix(in srgb, white 78%, transparent);
+    font-size: 0.75em;
+}
+
+.pagination-lg .page-link {
+    min-width: 3rem;
+    min-height: 3rem;
+}
+
+.pagination-icons .page-link {
+    font-weight: 900 !important;
+}
+
+/* =========================================================
+   TAILWIND-INSPIRED PAGINATION
+   ========================================================= */
+
+.tailwind-pagination {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    background:
+        var(--scanline-gradient),
+        var(--gradient-hologlass),
+        var(--surface-glass);
+
+    border-color: var(--border-glass);
+    border-radius: var(--radius-lg);
+
+    box-shadow:
+        inset 0 1px 0 color-mix(in srgb, white 24%, transparent),
+        var(--shadow-sm);
+
+    backdrop-filter: blur(var(--blur-sm));
+}
+
+.tailwind-pagination::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    background:
+        radial-gradient(
+            circle at 96% 12%,
+            color-mix(in srgb, var(--color-primary) 18%, transparent) 0%,
+            transparent 34%
+        ),
+        radial-gradient(
+            circle at 8% 88%,
+            color-mix(in srgb, var(--color-secondary) 12%, transparent) 0%,
+            transparent 36%
+        );
+
+    opacity: 0.72;
+    pointer-events: none;
+}
+
+.tailwind-pagination a,
+.tailwind-pagination span {
+    border-radius: var(--radius-round);
+    font-weight: 800;
+}
+
+.tailwind-pagination a:hover {
+    background:
+        var(--gradient-hologlass),
+        var(--surface-glass-soft);
+
+    box-shadow: var(--glow-primary);
+}
+
+.tailwind-pagination a.active {
+    color: var(--color-text-on-primary);
+    background: var(--gradient-primary);
+    box-shadow:
+        inset 0 1px 0 color-mix(in srgb, white 30%, transparent),
+        var(--glow-primary);
+}
+
+.tailwind-pagination a.active::after {
+    content: "∕";
+    margin-left: 0.2rem;
+}

@@ -1,0 +1,34 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import 'base/0-ruleset.css';
+@import 'base/1-main.css';
+@import 'base/accordions.css';
+@import 'base/alerts.css';
+@import 'base/badges.css';
+@import 'base/breadcrumbs.css';
+@import 'base/buttons.css';
+@import 'base/cards.css';
+@import 'base/carousels.css';
+@import 'base/dropdowns.css';
+@import 'base/forms.css';
+@import 'base/lists.css';
+@import 'base/menu.css';
+@import 'base/modals.css';
+@import 'base/navbar.css';
+@import 'base/off-canvas.css';
+@import 'base/pagination.css';
+@import 'base/progress.css';
+@import 'base/spinners.css';
+@import 'base/tables.css';
+@import 'base/tabs.css';
+@import 'base/toasts.css';
+@import 'base/tooltips.css';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'Noto Color Emoji';
+}

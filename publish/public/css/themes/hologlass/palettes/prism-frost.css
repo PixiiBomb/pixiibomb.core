@@ -1,0 +1,98 @@
+/* =========================================================
+   PRISM FROST
+   Hologlass Light Palette
+   Frosted sci-fi glass / holographic daylight
+   ========================================================= */
+
+:root {
+    --color-bg-primary: #eef7ff;
+    --color-bg-secondary: #f8fcff;
+    --color-bg-variant: #dfefff;
+
+    --color-bg: var(--color-bg-primary);
+
+    --color-text-primary: #162637;
+    --color-text-secondary: #4f6378;
+    --color-text-accent: #006dff;
+    --color-text-variant: #708399;
+    --color-text-muted: #8fa1b4;
+
+    --color-text-on-primary: #ffffff;
+    --color-text-on-secondary: #ffffff;
+    --color-text-on-accent: #061522;
+    --color-text-on-variant: #162637;
+
+    --color-text-on-success: #06291f;
+    --color-text-on-danger: #ffffff;
+    --color-text-on-caution: #2d2200;
+    --color-text-on-note: #ffffff;
+
+    --color-text-on-light: #162637;
+    --color-text-on-dark: #ffffff;
+
+    --color-border-primary: rgba(120, 180, 255, 0.34);
+    --color-border-secondary: rgba(0, 109, 255, 0.38);
+    --color-border-accent: rgba(0, 229, 255, 0.46);
+    --color-border-variant: rgba(150, 135, 255, 0.32);
+
+    --color-primary: #006dff;
+    --color-secondary: #7b61ff;
+    --color-accent: #dff8ff;
+    --color-variant: #ebf2ff;
+
+    --color-success: #49e6b1;
+    --color-danger: #ff4d7d;
+    --color-caution: #ffd166;
+    --color-note: #00b8ff;
+
+    --shadow-sm: 0 14px 34px rgba(0, 109, 255, 0.12);
+    --shadow-md: 0 24px 70px rgba(0, 65, 150, 0.18);
+
+    --blur-sm: 14px;
+    --blur-md: 22px;
+
+    --surface-glass: rgba(248, 252, 255, 0.62);
+    --surface-glass-soft: rgba(235, 248, 255, 0.48);
+    --surface-glass-strong: rgba(255, 255, 255, 0.78);
+
+    --border-glass: rgba(120, 210, 255, 0.42);
+
+    --glow-primary: 0 0 28px rgba(0, 109, 255, 0.24);
+    --glow-secondary: 0 0 32px rgba(123, 97, 255, 0.22);
+    --glow-accent: 0 0 34px rgba(0, 229, 255, 0.28);
+
+    --gradient-primary: linear-gradient(135deg, #006dff 0%, #00d9ff 55%, #7b61ff 100%);
+    --gradient-primary-hover: linear-gradient(135deg, #0059d6 0%, #00bfe0 55%, #654dff 100%);
+    --gradient-success: linear-gradient(135deg, #49e6b1 0%, #00d9ff 100%);
+    --gradient-danger: linear-gradient(135deg, #ff4d7d 0%, #ff7ab6 100%);
+    --gradient-caution: linear-gradient(135deg, #ffd166 0%, #ffef9a 100%);
+    --gradient-note: linear-gradient(135deg, #00b8ff 0%, #7b61ff 100%);
+    --gradient-variant: linear-gradient(135deg, rgba(255,255,255,0.78), rgba(223,248,255,0.54));
+
+    --gradient-hologlass:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.72) 0%,
+            rgba(223, 248, 255, 0.44) 36%,
+            rgba(206, 222, 255, 0.34) 68%,
+            rgba(255, 255, 255, 0.62) 100%
+        );
+
+    --gradient-hologram:
+        linear-gradient(
+            120deg,
+            rgba(0, 109, 255, 0.32),
+            rgba(0, 229, 255, 0.24),
+            rgba(123, 97, 255, 0.28),
+            rgba(255, 255, 255, 0.38)
+        );
+
+    --scanline-gradient:
+        repeating-linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.14) 0,
+            rgba(255, 255, 255, 0.14) 1px,
+            transparent 1px,
+            transparent 7px
+        );
+}

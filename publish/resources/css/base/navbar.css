@@ -1,0 +1,201 @@
+/* =========================================================
+   BASE NAVBAR
+   Modern product UI navbar
+   ========================================================= */
+
+.navbar {
+    position: relative;
+    z-index: 1000;
+    padding: var(--padding-sm) var(--padding-lg) !important;
+    color: var(--color-text-primary) !important;
+    background: color-mix(in srgb, var(--color-bg-secondary) 94%, transparent) !important;
+    box-shadow: var(--shadow-sm) !important;
+    backdrop-filter: blur(var(--blur-sm));
+}
+
+.navbar-brand {
+    color: var(--color-text-primary) !important;
+    font-size: var(--font-md) !important;
+    font-weight: 850 !important;
+    letter-spacing: -0.025em !important;
+}
+
+.navbar-nav {
+    align-items: center;
+}
+
+.navbar .nav-link {
+    color: var(--color-text-secondary) !important;
+    font-size: var(--font-sm) !important;
+    font-weight: 700 !important;
+    border-radius: var(--radius-xs) !important;
+    padding: var(--padding-sm) var(--padding-md) !important;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+    color: var(--color-text-primary) !important;
+    background: var(--color-bg-variant) !important;
+}
+
+.navbar .nav-link.active {
+    color: var(--color-text-primary) !important;
+    background: color-mix(in srgb, var(--color-primary) 12%, transparent) !important;
+}
+
+.navbar-toggler {
+    padding: var(--padding-sm) !important;
+    border: 1px solid var(--color-border-primary) !important;
+    border-radius: var(--radius-sm) !important;
+    box-shadow: none !important;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-primary) 22%, transparent) !important;
+}
+
+.navbar-toggler-icon {
+    filter: invert(0.45);
+}
+
+.user-menu-trigger {
+    display: flex;
+    align-items: center;
+    gap: var(--padding-sm);
+    padding: var(--padding-xs) var(--padding-sm);
+    color: var(--color-text-primary);
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: var(--radius-round);
+}
+
+.user-menu-trigger:hover {
+    background: var(--color-bg-variant);
+    border-color: var(--color-border-primary);
+}
+
+.user-avatar,
+.user-dropdown-avatar {
+    display: grid;
+    place-items: center;
+    color: var(--color-text-on-primary);
+    font-weight: 850;
+    background: var(--color-primary);
+    border-radius: var(--radius-round);
+}
+
+.user-avatar {
+    width: 36px;
+    height: 36px;
+}
+
+.user-dropdown-avatar {
+    width: 48px;
+    height: 48px;
+}
+
+.user-name {
+    font-weight: 750;
+}
+
+.user-dropdown {
+    min-width: 280px !important;
+}
+
+.user-dropdown-header {
+    position: relative;
+    display: flex;
+    gap: var(--padding-md);
+    padding: var(--padding-md);
+    z-index: 999!important;
+}
+
+.user-dropdown-header div {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-dropdown-header strong {
+    color: var(--color-text-primary);
+}
+
+.user-dropdown-header span {
+    color: var(--color-text-muted);
+    font-size: var(--font-sm);
+}
+
+.navbar-dark-preview {
+    color: var(--color-text-on-dark) !important;
+    background: var(--color-text-primary) !important;
+    border-color: color-mix(in srgb, var(--color-text-primary) 80%, white 20%) !important;
+}
+
+.navbar-dark-preview .navbar-brand,
+.navbar-dark-preview .nav-link {
+    color: color-mix(in srgb, var(--color-text-on-dark) 78%, transparent) !important;
+}
+
+.navbar-dark-preview .nav-link:hover,
+.navbar-dark-preview .nav-link.active {
+    color: var(--color-text-on-dark) !important;
+    background: color-mix(in srgb, white 12%, transparent) !important;
+}
+
+@media (max-width: 991px) {
+    .navbar-nav {
+        align-items: stretch;
+        padding-top: var(--padding-md);
+    }
+
+    .user-menu-trigger {
+        width: 100%;
+        justify-content: flex-start;
+    }
+}
+
+/* =========================================================
+   NAVBAR VARIANTS
+   Flush and sticky options
+   ========================================================= */
+
+.navbar-flush {
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+.navbar-flush::before,
+.navbar-flush::after {
+    display: none !important;
+}
+
+.navbar-sticky {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 1020 !important;
+}
+
+.navbar-rounded-sticky {
+    margin-inline: var(--padding-lg) !important;
+}
+
+.navbar-sticky-preview {
+    max-height: 360px;
+    overflow-y: auto;
+    padding: var(--padding-lg);
+    background: var(--color-bg-primary);
+    border: 1px solid var(--color-border-primary);
+    border-radius: var(--radius-lg);
+}
+
+.sticky-preview-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-md);
+    padding: var(--padding-xl) var(--padding-lg);
+    color: var(--color-text-secondary);
+}
+
+.sticky-preview-content p {
+    margin: 0;
+}

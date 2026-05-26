@@ -1,0 +1,85 @@
+:root {
+    /* =========================================================
+       BACKGROUNDS
+       ========================================================= */
+
+    --color-bg-primary: #171411;
+    --color-bg-secondary: #221d19;
+    --color-bg-variant: #2f2822;
+
+    /* =========================================================
+       TEXT
+       ========================================================= */
+
+    --color-text-primary: #f0e2c8;
+    --color-text-secondary: #c7b49a;
+    --color-text-accent: #d1a15f;
+    --color-text-variant: #9aa28a;
+    --color-text-muted: #857666;
+
+    --color-text-on-primary: #171411;
+    --color-text-on-secondary: #f0e2c8;
+    --color-text-on-accent: #171411;
+    --color-text-on-variant: #171411;
+    --color-text-on-success: #171411;
+    --color-text-on-danger: #f0e2c8;
+    --color-text-on-caution: #171411;
+    --color-text-on-note: #171411;
+    --color-text-on-light: #171411;
+    --color-text-on-dark: #f0e2c8;
+
+    /* =========================================================
+       BORDERS
+       ========================================================= */
+
+    --color-border-primary: #4a3d31;
+    --color-border-secondary: #6f5b46;
+    --color-border-accent: #9e7240;
+    --color-border-variant: #6d7566;
+
+    /* =========================================================
+       PALETTE SEEDS
+       ========================================================= */
+
+    --color-primary: #b45a32;
+    --color-secondary: #8a6a49;
+    --color-accent: #3b3128;
+    --color-variant: #7e8b74;
+
+    --color-success: #70825d;
+    --color-danger: #a3493e;
+    --color-caution: #c08a3c;
+    --color-note: #80959c;
+
+    /* =========================================================
+       EFFECTS
+       ========================================================= */
+
+    --shadow-sm:
+        0 10px 24px color-mix(in srgb, black 38%, transparent);
+
+    --shadow-md:
+        0 20px 48px color-mix(in srgb, black 48%, transparent);
+
+    --surface-glass:
+        color-mix(in srgb, var(--color-bg-secondary) 88%, transparent);
+
+    --surface-glass-soft:
+        color-mix(in srgb, var(--color-bg-secondary) 78%, transparent);
+
+    --surface-glass-strong:
+        color-mix(in srgb, var(--color-bg-secondary) 94%, transparent);
+
+    --border-glass:
+        color-mix(in srgb, var(--color-border-primary) 85%, transparent);
+
+    /* =========================================================
+       SHAPE
+       ========================================================= */
+
+    --radius-xs: 2px;
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 18px;
+    --radius-xl: 26px;
+}

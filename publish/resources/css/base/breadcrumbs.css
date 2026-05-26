@@ -1,0 +1,131 @@
+/* =========================================================
+   BASE BREADCRUMBS
+   Modern product breadcrumbs
+   ========================================================= */
+
+.breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--padding-sm);
+
+    margin: 0;
+    padding: 0;
+
+    background: transparent;
+}
+
+.breadcrumb-item {
+    display: flex;
+    align-items: center;
+
+    color: var(--color-text-secondary);
+    font-size: var(--font-sm);
+    font-weight: 650;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    padding-right: var(--padding-sm);
+
+    color: var(--color-text-muted);
+
+    content: "/";
+}
+
+.breadcrumb-item a {
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    transition:
+        color 0.14s ease,
+        opacity 0.14s ease;
+}
+
+.breadcrumb-item a:hover {
+    color: var(--color-primary);
+}
+
+.breadcrumb-item.active {
+    color: var(--color-text-primary);
+    font-weight: 800;
+}
+
+/* =========================================================
+   ROUNDED
+   ========================================================= */
+
+.breadcrumb-rounded {
+    display: inline-flex;
+
+    padding:
+        var(--padding-sm)
+        var(--padding-md);
+
+    background: var(--color-bg-secondary);
+
+    border: 1px solid var(--color-border-primary);
+    border-radius: var(--radius-round);
+
+    box-shadow: var(--shadow-sm);
+}
+
+/* =========================================================
+   PILLS
+   ========================================================= */
+
+.breadcrumb-pills {
+    gap: var(--padding-xs);
+}
+
+.breadcrumb-pills .breadcrumb-item {
+    padding:
+        var(--padding-xs)
+        var(--padding-sm);
+
+    background: var(--color-bg-secondary);
+
+    border: 1px solid var(--color-border-primary);
+    border-radius: var(--radius-round);
+}
+
+.breadcrumb-pills .breadcrumb-item::before {
+    display: none;
+}
+
+.breadcrumb-pills .breadcrumb-item.active {
+    color: var(--color-text-on-primary);
+    background: var(--color-primary);
+    border-color: var(--color-primary-60);
+}
+
+/* =========================================================
+   TAILWIND STYLE
+   ========================================================= */
+
+.tailwind-breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--padding-sm);
+
+    color: var(--color-text-secondary);
+    font-size: var(--font-sm);
+    font-weight: 650;
+}
+
+.tailwind-breadcrumb a {
+    color: var(--color-text-secondary);
+    text-decoration: none;
+}
+
+.tailwind-breadcrumb a:hover {
+    color: var(--color-primary);
+}
+
+.tailwind-breadcrumb span {
+    color: var(--color-text-muted);
+}
+
+.tailwind-breadcrumb strong {
+    color: var(--color-text-primary);
+    font-weight: 850;
+}

@@ -1,0 +1,21 @@
+{
+    "name": "@pixiibomb/core",
+    "version": "1.0.0",
+    "description": "A standard package for all PixiiBomb projects",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "mix"
+    },
+    "keywords": [],
+    "author": "PixiiBomb",
+    "license": "ISC",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/PixiiBomb/essentials.git"
+    },
+    "bugs": {
+        "url": "https://github.com/PixiiBomb/essentials/issues"
+    },
+    "homepage": "https://github.com/PixiiBomb/essentials#readme"
+}

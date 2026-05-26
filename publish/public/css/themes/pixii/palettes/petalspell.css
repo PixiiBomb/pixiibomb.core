@@ -1,0 +1,105 @@
+:root {
+    /* =========================================================
+       PETALSPELL
+       PixiiBomb Light Palette
+       Soft watercolor storybook palette
+       ========================================================= */
+
+    /* =========================================================
+       BACKGROUNDS
+       ========================================================= */
+
+    --color-bg-primary: #fff8fb;
+    --color-bg-secondary: #fffdfd;
+    --color-bg-variant: #f8eef3;
+
+    --color-bg: var(--color-bg-primary);
+
+    /* =========================================================
+       TEXT
+       ========================================================= */
+
+    --color-text-primary: #5f4b57;
+    --color-text-secondary: #8c7480;
+    --color-text-accent: #d88faa;
+    --color-text-variant: #9b8b93;
+    --color-text-muted: #b6a5ae;
+
+    /* =========================================================
+       TEXT ON COLORS
+       ========================================================= */
+
+    --color-text-on-primary: #ffffff;
+    --color-text-on-secondary: #ffffff;
+    --color-text-on-accent: #ffffff;
+    --color-text-on-variant: #ffffff;
+
+    --color-text-on-success: #4c5a4d;
+    --color-text-on-danger: #6f4a57;
+    --color-text-on-caution: #5f553d;
+    --color-text-on-note: #4f5870;
+
+    --color-text-on-light: #5f4b57;
+    --color-text-on-dark: #ffffff;
+
+    /* =========================================================
+       BORDERS
+       ========================================================= */
+
+    --color-border-primary: #eadde3;
+    --color-border-secondary: #e6d7de;
+    --color-border-accent: #f3dce5;
+    --color-border-variant: #e9e0e5;
+
+    /* =========================================================
+       SEMANTIC / INTERACTIVE
+       ========================================================= */
+
+    /* Pixii pink */
+    --color-primary: #e6b7c8;
+
+    /* Sage watercolor */
+    --color-secondary: #b7c7b2;
+
+    /* Pale blush */
+    --color-accent: #f9e8ef;
+
+    /* Lavender paper */
+    --color-variant: #efe7ec;
+
+    /* =========================================================
+       STATUS COLORS
+       ========================================================= */
+
+    /* Mint leaf */
+    --color-success: #dcecdf;
+
+    /* Rose petal */
+    --color-danger: #efc9d5;
+
+    /* Honey parchment */
+    --color-caution: #f4e5bf;
+
+    /* Cloudy lavender-blue */
+    --color-note: #d9e3f2;
+
+    /* =========================================================
+       EFFECTS
+       ========================================================= */
+
+    --shadow-sm: 0 10px 20px rgba(191, 143, 165, 0.12);
+    --shadow-md: 0 16px 40px rgba(145, 118, 130, 0.10);
+
+    --blur-sm: 10px;
+    --blur-md: 12px;
+
+    /* =========================================================
+       GLASS SURFACES
+       ========================================================= */
+
+    --surface-glass: rgba(255, 250, 252, 0.88);
+    --surface-glass-soft: rgba(255, 247, 250, 0.82);
+    --surface-glass-strong: rgba(255, 252, 253, 0.94);
+
+    --border-glass: rgba(233, 217, 225, 0.85);
+}

@@ -1,0 +1,98 @@
+/* =========================================================
+   VOID CHROME
+   Hologlass Dark Palette
+   Neon glass / deep-space interface
+   ========================================================= */
+
+:root {
+    --color-bg-primary: #07111f;
+    --color-bg-secondary: #0d1a2b;
+    --color-bg-variant: #13243a;
+
+    --color-bg: var(--color-bg-primary);
+
+    --color-text-primary: #edf8ff;
+    --color-text-secondary: #a8bfd4;
+    --color-text-accent: #62e7ff;
+    --color-text-variant: #7d95ad;
+    --color-text-muted: #63788f;
+
+    --color-text-on-primary: #03101c;
+    --color-text-on-secondary: #03101c;
+    --color-text-on-accent: #03101c;
+    --color-text-on-variant: #edf8ff;
+
+    --color-text-on-success: #031913;
+    --color-text-on-danger: #ffffff;
+    --color-text-on-caution: #221800;
+    --color-text-on-note: #03101c;
+
+    --color-text-on-light: #07111f;
+    --color-text-on-dark: #ffffff;
+
+    --color-border-primary: rgba(98, 231, 255, 0.22);
+    --color-border-secondary: rgba(0, 184, 255, 0.36);
+    --color-border-accent: rgba(123, 97, 255, 0.46);
+    --color-border-variant: rgba(255, 255, 255, 0.12);
+
+    --color-primary: #62e7ff;
+    --color-secondary: #8b7cff;
+    --color-accent: #142f46;
+    --color-variant: #101f33;
+
+    --color-success: #48f0b4;
+    --color-danger: #ff4d7d;
+    --color-caution: #ffd166;
+    --color-note: #2f9bff;
+
+    --shadow-sm: 0 14px 34px rgba(0, 0, 0, 0.34);
+    --shadow-md: 0 26px 80px rgba(0, 0, 0, 0.48);
+
+    --blur-sm: 16px;
+    --blur-md: 26px;
+
+    --surface-glass: rgba(13, 26, 43, 0.58);
+    --surface-glass-soft: rgba(20, 47, 70, 0.42);
+    --surface-glass-strong: rgba(7, 17, 31, 0.76);
+
+    --border-glass: rgba(98, 231, 255, 0.30);
+
+    --glow-primary: 0 0 30px rgba(98, 231, 255, 0.28);
+    --glow-secondary: 0 0 34px rgba(139, 124, 255, 0.26);
+    --glow-accent: 0 0 38px rgba(0, 184, 255, 0.24);
+
+    --gradient-primary: linear-gradient(135deg, #62e7ff 0%, #2f9bff 48%, #8b7cff 100%);
+    --gradient-primary-hover: linear-gradient(135deg, #8af0ff 0%, #4facff 48%, #a49aff 100%);
+    --gradient-success: linear-gradient(135deg, #48f0b4 0%, #62e7ff 100%);
+    --gradient-danger: linear-gradient(135deg, #ff4d7d 0%, #ff2fbb 100%);
+    --gradient-caution: linear-gradient(135deg, #ffd166 0%, #ff9f1c 100%);
+    --gradient-note: linear-gradient(135deg, #2f9bff 0%, #62e7ff 100%);
+    --gradient-variant: linear-gradient(135deg, rgba(20,47,70,0.72), rgba(13,26,43,0.54));
+
+    --gradient-hologlass:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.10) 0%,
+            rgba(98, 231, 255, 0.12) 34%,
+            rgba(139, 124, 255, 0.10) 68%,
+            rgba(255, 255, 255, 0.07) 100%
+        );
+
+    --gradient-hologram:
+        linear-gradient(
+            120deg,
+            rgba(98, 231, 255, 0.28),
+            rgba(47, 155, 255, 0.20),
+            rgba(139, 124, 255, 0.28),
+            rgba(255, 255, 255, 0.10)
+        );
+
+    --scanline-gradient:
+        repeating-linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.045) 0,
+            rgba(255, 255, 255, 0.045) 1px,
+            transparent 1px,
+            transparent 7px
+        );
+}

@@ -1,0 +1,118 @@
+/* =========================================================
+   BASE MODALS
+   Modern product UI modals
+   ========================================================= */
+
+.modal-backdrop {
+    background-color: color-mix(in srgb, black 72%, var(--color-bg-primary) 28%) !important;
+}
+
+.modal-backdrop.show {
+    opacity: 0.62 !important;
+}
+
+.modal-content {
+    color: var(--color-text-primary) !important;
+    background: var(--color-bg-secondary) !important;
+    border: 1px solid var(--color-border-primary) !important;
+    border-radius: var(--radius-lg) !important;
+    box-shadow: var(--shadow-md) !important;
+}
+
+.modal-header,
+.modal-footer {
+    padding: var(--padding-lg) var(--padding-xl) !important;
+    border-color: var(--color-border-primary) !important;
+}
+
+.modal-body {
+    padding: var(--padding-xl) !important;
+    color: var(--color-text-secondary) !important;
+    line-height: 1.6 !important;
+}
+
+.modal-title {
+    color: var(--color-text-primary) !important;
+    font-weight: 850 !important;
+    letter-spacing: -0.02em !important;
+}
+
+.modal-subtitle {
+    margin: var(--padding-xs) 0 0 !important;
+    color: var(--color-text-muted) !important;
+    font-size: var(--font-sm) !important;
+}
+
+.btn-close {
+    border-radius: var(--radius-round) !important;
+    opacity: 0.65 !important;
+}
+
+.btn-close:hover {
+    opacity: 1 !important;
+    background-color: var(--color-bg-variant) !important;
+}
+
+/* Style: Primary */
+.modal.primary {
+    border-radius: calc(var(--radius-lg) * 1.15) !important;
+}
+
+.modal.primary .modal-header,
+.modal.primary .modal-footer {
+    border: 0 !important;
+    background: transparent !important;
+}
+
+.modal.primary .modal-header {
+    align-items: flex-start !important;
+    padding-bottom: var(--padding-sm) !important;
+}
+
+.modal.primary .modal-body {
+    padding-top: var(--padding-sm) !important;
+    padding-bottom: var(--padding-md) !important;
+}
+
+.modal.primary .modal-footer {
+    padding-top: var(--padding-sm) !important;
+}
+
+.modal-preview-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-xs);
+    margin-top: var(--padding-lg);
+    padding: var(--padding-lg);
+    color: var(--color-text-primary);
+    background: var(--color-bg-variant);
+    border: 1px solid var(--color-border-primary);
+    border-radius: var(--radius-md);
+}
+
+.modal-preview-card span {
+    color: var(--color-text-secondary);
+    font-size: var(--font-sm);
+}
+
+/* Style: Secondary */
+
+.modal.secondary .modal-header {
+    background: var(--color-bg-variant) !important;
+    border-bottom: 1px solid var(--color-border-primary) !important;
+}
+
+.modal.secondary .modal-footer {
+    background: var(--color-bg-variant) !important;
+    border-top: 1px solid var(--color-border-primary) !important;
+}
+
+/* Style: Prompt */
+
+.modal.prompt {
+    border-color: var(--color-danger-60) !important;
+}
+
+.modal.prompt .modal-title {
+    color: var(--color-danger-80) !important;
+}

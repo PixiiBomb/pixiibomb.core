@@ -1,0 +1,19 @@
+<?php
+
+namespace {{namespace}};
+
+use Illuminate\View\View;
+use PixiiBomb\Core\Controllers\PageController;
+use PixiiBomb\Core\Data\Page;
+
+class {{classname}} extends PageController
+{
+    /**
+     * PixiiBomb default return "this" view example:
+     */
+    public function index(): View
+    {
+        $page = new Page(parent::me());
+        return parent::view($page);
+    }
+}

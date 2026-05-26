@@ -1,0 +1,241 @@
+/* =========================================================
+   HOLOGLASS OFFCANVAS
+   Futuristic glassmorphism drawer overrides
+   ========================================================= */
+
+.offcanvas {
+    position: relative !important;
+    isolation: isolate !important;
+    overflow: hidden !important;
+
+    background:
+        var(--scanline-gradient),
+        var(--gradient-hologlass),
+        var(--surface-glass-strong) !important;
+
+    border-color: var(--border-glass) !important;
+
+    box-shadow:
+        inset 0 1px 0 color-mix(in srgb, white 24%, transparent),
+        var(--shadow-md),
+        var(--glow-primary) !important;
+
+    backdrop-filter: blur(var(--blur-md));
+}
+
+.offcanvas::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    background:
+        radial-gradient(
+            circle at 96% 10%,
+            color-mix(in srgb, var(--color-primary) 22%, transparent) 0%,
+            transparent 34%
+        ),
+        radial-gradient(
+            circle at 8% 92%,
+            color-mix(in srgb, var(--color-secondary) 18%, transparent) 0%,
+            transparent 36%
+        );
+
+    opacity: 0.82;
+    pointer-events: none;
+}
+
+.offcanvas::after {
+    content: "";
+    position: absolute;
+    top: -48%;
+    left: -24%;
+    width: 38%;
+    height: 196%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            color-mix(in srgb, white 28%, transparent),
+            transparent
+        );
+
+    opacity: 0.2;
+    transform: rotate(18deg);
+    pointer-events: none;
+}
+
+.offcanvas-backdrop {
+    background:
+        radial-gradient(
+            circle at 50% 42%,
+            color-mix(in srgb, var(--color-primary) 24%, transparent) 0%,
+            transparent 36%
+        ),
+        radial-gradient(
+            circle at 12% 88%,
+            color-mix(in srgb, var(--color-secondary) 18%, transparent) 0%,
+            transparent 34%
+        ),
+        color-mix(in srgb, black 70%, var(--color-bg-primary) 30%) !important;
+}
+
+.offcanvas-backdrop.show {
+    opacity: 0.72 !important;
+}
+
+.offcanvas-header {
+    background:
+        linear-gradient(
+            90deg,
+            color-mix(in srgb, var(--color-primary) 14%, transparent),
+            color-mix(in srgb, var(--color-secondary) 10%, transparent)
+        ) !important;
+
+    border-bottom-color: var(--border-glass) !important;
+}
+
+.offcanvas-title {
+    font-weight: 900 !important;
+    letter-spacing: -0.035em !important;
+    text-shadow:
+        0 0 24px color-mix(in srgb, var(--color-primary) 22%, transparent);
+}
+
+.offcanvas-title::after {
+    content: " /";
+    color: var(--color-primary);
+    text-shadow: var(--glow-primary);
+}
+
+.offcanvas .btn-close {
+    opacity: 0.72 !important;
+}
+
+.offcanvas .btn-close:hover {
+    background-color: color-mix(in srgb, var(--color-primary) 14%, transparent) !important;
+    box-shadow: var(--glow-primary) !important;
+}
+
+.offcanvas-start,
+.offcanvas-end,
+.offcanvas-top,
+.offcanvas-bottom {
+    border-color: var(--border-glass) !important;
+}
+
+.offcanvas-menu a {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    border: 1px solid transparent;
+    border-radius: var(--radius-round);
+
+    font-weight: 800;
+
+    transition:
+        color 0.16s ease,
+        background 0.16s ease,
+        border-color 0.16s ease,
+        box-shadow 0.16s ease,
+        transform 0.16s ease;
+}
+
+.offcanvas-menu a::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    background:
+        linear-gradient(
+            90deg,
+            color-mix(in srgb, var(--color-primary) 16%, transparent),
+            color-mix(in srgb, var(--color-secondary) 10%, transparent)
+        );
+
+    opacity: 0;
+    transition: opacity 0.16s ease;
+    pointer-events: none;
+}
+
+.offcanvas-menu a:hover,
+.offcanvas-menu a:focus {
+    background:
+        var(--gradient-hologlass),
+        var(--surface-glass-soft);
+
+    border-color: var(--border-glass);
+
+    box-shadow:
+        inset 3px 0 0 var(--color-primary),
+        var(--glow-primary);
+
+    transform: translateX(2px);
+}
+
+.offcanvas-menu a:hover::before,
+.offcanvas-menu a:focus::before {
+    opacity: 1;
+}
+
+.offcanvas-menu a.active {
+    color: var(--color-text-on-primary);
+    background: var(--gradient-primary);
+    border-color: color-mix(in srgb, var(--color-primary) 72%, white 18%);
+
+    box-shadow:
+        inset 0 1px 0 color-mix(in srgb, white 30%, transparent),
+        var(--glow-primary);
+}
+
+.offcanvas-menu a.active::after {
+    content: " ∕";
+}
+
+.offcanvas-card {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    background:
+        var(--scanline-gradient),
+        var(--gradient-hologlass),
+        var(--surface-glass);
+
+    border-color: var(--border-glass);
+    border-radius: var(--radius-lg);
+
+    box-shadow:
+        inset 0 1px 0 color-mix(in srgb, white 24%, transparent),
+        var(--shadow-sm);
+
+    backdrop-filter: blur(var(--blur-sm));
+}
+
+.offcanvas-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    background:
+        radial-gradient(
+            circle at 92% 12%,
+            color-mix(in srgb, var(--color-primary) 18%, transparent) 0%,
+            transparent 34%
+        ),
+        radial-gradient(
+            circle at 8% 88%,
+            color-mix(in srgb, var(--color-secondary) 12%, transparent) 0%,
+            transparent 36%
+        );
+
+    opacity: 0.72;
+}
+
+.offcanvas-card strong {
+    font-weight: 900;
+}

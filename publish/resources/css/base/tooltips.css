@@ -1,0 +1,119 @@
+/* =========================================================
+   BASE TOOLTIPS
+   Modern product UI tooltips
+   ========================================================= */
+
+.tooltip {
+    --bs-tooltip-max-width: 260px;
+    --bs-tooltip-padding-x: var(--padding-md);
+    --bs-tooltip-padding-y: var(--padding-sm);
+    --bs-tooltip-font-size: var(--font-xs);
+    --bs-tooltip-color: var(--color-text-on-dark);
+    --bs-tooltip-bg: var(--color-text-primary);
+    --bs-tooltip-border-radius: var(--radius-sm);
+    --bs-tooltip-opacity: 1;
+}
+
+.tooltip-inner {
+    font-weight: 700 !important;
+    line-height: 1.4 !important;
+    box-shadow: var(--shadow-md) !important;
+}
+
+.tooltip.bs-tooltip-top .tooltip-arrow::before {
+    border-top-color: var(--color-text-primary) !important;
+}
+
+.tooltip.bs-tooltip-end .tooltip-arrow::before {
+    border-right-color: var(--color-text-primary) !important;
+}
+
+.tooltip.bs-tooltip-bottom .tooltip-arrow::before {
+    border-bottom-color: var(--color-text-primary) !important;
+}
+
+.tooltip.bs-tooltip-start .tooltip-arrow::before {
+    border-left-color: var(--color-text-primary) !important;
+}
+
+/* =========================================================
+   CSS-ONLY HINTS
+   ========================================================= */
+
+.tooltip-hint {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    cursor: help;
+    color: var(--color-primary);
+    font-weight: 800;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-underline-offset: 0.2em;
+}
+
+.tooltip-hint::before,
+.tooltip-hint::after {
+    position: absolute;
+    left: 50%;
+    z-index: 20;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-50%) translateY(0.25rem);
+    transition:
+        opacity 0.14s ease,
+        transform 0.14s ease;
+}
+
+.tooltip-hint::before {
+    content: attr(data-tooltip);
+    bottom: calc(100% + 0.55rem);
+    width: max-content;
+    max-width: 240px;
+    padding: var(--padding-sm) var(--padding-md);
+    color: var(--color-text-on-dark);
+    background: var(--color-text-primary);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-md);
+    font-size: var(--font-xs);
+    font-weight: 700;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.tooltip-hint::after {
+    content: "";
+    bottom: calc(100% + 0.2rem);
+    border: 0.35rem solid transparent;
+    border-top-color: var(--color-text-primary);
+}
+
+.tooltip-hint:hover::before,
+.tooltip-hint:hover::after,
+.tooltip-hint:focus::before,
+.tooltip-hint:focus::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+.tooltip-hint-primary::before {
+    color: var(--color-text-on-primary);
+    background: var(--color-primary);
+}
+
+.tooltip-hint-primary::after {
+    border-top-color: var(--color-primary);
+}
+
+.tooltip-hint-danger {
+    color: var(--color-danger-80);
+}
+
+.tooltip-hint-danger::before {
+    color: var(--color-text-on-danger);
+    background: var(--color-danger);
+}
+
+.tooltip-hint-danger::after {
+    border-top-color: var(--color-danger);
+}

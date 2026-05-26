@@ -1,0 +1,233 @@
+/* =========================================================
+   HOLOGLASS CAROUSEL
+   Futuristic glassmorphism carousel overrides
+   ========================================================= */
+
+.carousel {
+    position: relative !important;
+    isolation: isolate !important;
+
+    background:
+        var(--scanline-gradient),
+        var(--gradient-hologlass),
+        var(--surface-glass) !important;
+
+    border-color: var(--border-glass) !important;
+
+    box-shadow:
+        inset 0 1px 0 color-mix(in srgb, white 24%, transparent),
+        var(--shadow-md),
+        var(--glow-primary) !important;
+
+    backdrop-filter: blur(var(--blur-sm));
+}
+
+.carousel::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+
+    background:
+        radial-gradient(
+            circle at 92% 12%,
+            color-mix(in srgb, var(--color-primary) 22%, transparent) 0%,
+            transparent 34%
+        ),
+        radial-gradient(
+            circle at 12% 88%,
+            color-mix(in srgb, var(--color-secondary) 18%, transparent) 0%,
+            transparent 38%
+        );
+
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.carousel::after {
+    content: "";
+    position: absolute;
+    top: -45%;
+    left: -22%;
+    z-index: 2;
+
+    width: 36%;
+    height: 190%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            color-mix(in srgb, white 28%, transparent),
+            transparent
+        );
+
+    opacity: 0.24;
+    transform: rotate(18deg);
+    pointer-events: none;
+}
+
+.carousel-preview-surface {
+    background:
+        var(--scanline-gradient),
+        radial-gradient(
+            circle at 18% 14%,
+            color-mix(in srgb, var(--color-primary) 24%, transparent) 0%,
+            transparent 34%
+        ),
+        radial-gradient(
+            circle at 88% 78%,
+            color-mix(in srgb, var(--color-secondary) 22%, transparent) 0%,
+            transparent 38%
+        ),
+        var(--gradient-hologlass),
+        var(--surface-glass);
+}
+
+.carousel-eyebrow {
+    color: var(--color-primary);
+    text-shadow: var(--glow-primary);
+}
+
+.carousel-preview-content h3 {
+    text-shadow:
+        0 0 24px color-mix(in srgb, var(--color-primary) 18%, transparent);
+}
+
+.carousel-preview-content p {
+    line-height: 1.65;
+}
+
+/* =========================================================
+   SLIDES
+   ========================================================= */
+
+.primary-slide {
+    background:
+        var(--scanline-gradient),
+        radial-gradient(
+            circle at 88% 20%,
+            color-mix(in srgb, var(--color-primary) 34%, transparent) 0%,
+            transparent 36%
+        ),
+        radial-gradient(
+            circle at 18% 84%,
+            color-mix(in srgb, var(--color-secondary) 22%, transparent) 0%,
+            transparent 38%
+        ),
+        var(--gradient-hologlass);
+}
+
+.secondary-slide {
+    background:
+        var(--scanline-gradient),
+        radial-gradient(
+            circle at 88% 20%,
+            color-mix(in srgb, var(--color-secondary) 34%, transparent) 0%,
+            transparent 36%
+        ),
+        radial-gradient(
+            circle at 18% 84%,
+            color-mix(in srgb, var(--color-primary) 18%, transparent) 0%,
+            transparent 38%
+        ),
+        var(--gradient-hologlass);
+}
+
+.accent-slide {
+    background:
+        var(--scanline-gradient),
+        radial-gradient(
+            circle at 86% 18%,
+            color-mix(in srgb, var(--color-note) 28%, transparent) 0%,
+            transparent 36%
+        ),
+        radial-gradient(
+            circle at 16% 86%,
+            color-mix(in srgb, var(--color-secondary) 20%, transparent) 0%,
+            transparent 38%
+        ),
+        var(--gradient-hologlass);
+}
+
+.note-slide {
+    background:
+        var(--scanline-gradient),
+        radial-gradient(
+            circle at 88% 18%,
+            color-mix(in srgb, var(--color-note) 36%, transparent) 0%,
+            transparent 38%
+        ),
+        var(--surface-glass);
+}
+
+.success-slide {
+    background:
+        var(--scanline-gradient),
+        radial-gradient(
+            circle at 88% 18%,
+            color-mix(in srgb, var(--color-success) 34%, transparent) 0%,
+            transparent 38%
+        ),
+        var(--surface-glass);
+}
+
+/* =========================================================
+   CAPTION
+   ========================================================= */
+
+.carousel-caption {
+    background:
+        var(--scanline-gradient),
+        var(--gradient-hologlass),
+        var(--surface-glass-strong) !important;
+
+    border-color: var(--border-glass) !important;
+    border-radius: var(--radius-lg) !important;
+
+    box-shadow:
+        inset 0 1px 0 color-mix(in srgb, white 24%, transparent),
+        var(--shadow-sm),
+        var(--glow-primary) !important;
+
+    backdrop-filter: blur(var(--blur-md));
+}
+
+.carousel-caption h4 {
+    text-shadow: var(--glow-primary);
+}
+
+/* =========================================================
+   INDICATORS / CONTROLS
+   ========================================================= */
+
+.carousel-indicators [data-bs-target] {
+    background-color: color-mix(in srgb, var(--color-primary) 64%, transparent) !important;
+    box-shadow: var(--glow-primary) !important;
+    opacity: 0.5 !important;
+}
+
+.carousel-indicators .active {
+    width: 1.8rem !important;
+    background: var(--gradient-primary) !important;
+    opacity: 1 !important;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: color-mix(in srgb, var(--surface-glass-strong) 84%, transparent) !important;
+
+    border: 1px solid var(--border-glass) !important;
+
+    box-shadow:
+        inset 0 1px 0 color-mix(in srgb, white 24%, transparent),
+        var(--shadow-sm),
+        var(--glow-primary) !important;
+
+    backdrop-filter: blur(var(--blur-sm));
+}
+
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+    background-color: var(--color-primary) !important;
+}

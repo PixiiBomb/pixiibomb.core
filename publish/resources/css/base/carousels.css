@@ -1,0 +1,209 @@
+/* =========================================================
+   BASE CAROUSEL
+   Modern product UI carousel
+   ========================================================= */
+
+.carousel {
+    overflow: hidden !important;
+    background: var(--color-bg-secondary) !important;
+    border: 1px solid var(--color-border-primary) !important;
+    border-radius: var(--radius-lg) !important;
+    box-shadow: var(--shadow-sm) !important;
+}
+
+.carousel-inner {
+    border-radius: inherit !important;
+}
+
+.carousel-preview-surface {
+    display: flex;
+    align-items: center;
+    min-height: 360px;
+    padding: calc(var(--padding-xl) * 2);
+    color: var(--color-text-primary);
+    background:
+        linear-gradient(
+            135deg,
+            var(--color-bg-variant) 0%,
+            var(--color-bg-secondary) 100%
+        );
+}
+
+.compact-carousel .carousel-preview-surface {
+    min-height: 260px;
+}
+
+.carousel-preview-content {
+    max-width: 540px;
+}
+
+.carousel-eyebrow {
+    display: inline-flex;
+    margin-bottom: var(--padding-sm);
+    color: var(--color-primary);
+    font-size: var(--font-xs);
+    font-weight: 850;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.carousel-preview-content h3 {
+    margin: 0 0 var(--padding-sm);
+    color: var(--color-text-primary);
+    font-size: var(--font-xl);
+    font-weight: 850;
+    letter-spacing: -0.03em;
+}
+
+.carousel-preview-content p {
+    margin: 0;
+    color: var(--color-text-secondary);
+    font-size: var(--font-md);
+    line-height: 1.6;
+}
+
+.primary-slide {
+    background:
+        radial-gradient(
+            circle at 88% 20%,
+            color-mix(in srgb, var(--color-primary) 18%, transparent) 0%,
+            transparent 34%
+        ),
+        linear-gradient(
+            135deg,
+            var(--color-bg-variant) 0%,
+            var(--color-bg-secondary) 100%
+        );
+}
+
+.secondary-slide {
+    background:
+        radial-gradient(
+            circle at 88% 18%,
+            color-mix(in srgb, var(--color-secondary) 20%, transparent) 0%,
+            transparent 34%
+        ),
+        linear-gradient(
+            135deg,
+            var(--color-bg-secondary) 0%,
+            var(--color-bg-variant) 100%
+        );
+}
+
+.accent-slide {
+    background:
+        radial-gradient(
+            circle at 88% 18%,
+            color-mix(in srgb, var(--color-accent) 45%, transparent) 0%,
+            transparent 38%
+        ),
+        linear-gradient(
+            135deg,
+            var(--color-bg-variant) 0%,
+            var(--color-bg-secondary) 100%
+        );
+}
+
+.note-slide {
+    background:
+        radial-gradient(
+            circle at 88% 18%,
+            color-mix(in srgb, var(--color-note) 34%, transparent) 0%,
+            transparent 38%
+        ),
+        var(--color-bg-secondary);
+}
+
+.success-slide {
+    background:
+        radial-gradient(
+            circle at 88% 18%,
+            color-mix(in srgb, var(--color-success) 34%, transparent) 0%,
+            transparent 38%
+        ),
+        var(--color-bg-secondary);
+}
+
+.carousel-caption {
+    right: var(--padding-xl) !important;
+    bottom: var(--padding-xl) !important;
+    left: auto !important;
+    width: min(420px, 42%) !important;
+    padding: var(--padding-lg) !important;
+    color: var(--color-text-primary) !important;
+    text-align: left !important;
+    background: color-mix(in srgb, var(--color-bg-secondary) 88%, transparent) !important;
+    border: 1px solid var(--color-border-primary) !important;
+    border-radius: var(--radius-md) !important;
+    box-shadow: var(--shadow-sm) !important;
+    backdrop-filter: blur(var(--blur-sm));
+}
+
+.carousel-caption h4,
+.carousel-caption p {
+    margin: 0 !important;
+}
+
+.carousel-caption h4 {
+    color: var(--color-text-primary) !important;
+    font-weight: 850 !important;
+}
+
+.carousel-caption p {
+    margin-top: var(--padding-xs) !important;
+    color: var(--color-text-secondary) !important;
+}
+
+.carousel-indicators {
+    margin-bottom: var(--padding-lg) !important;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 0.55rem !important;
+    height: 0.55rem !important;
+    margin-right: 0.28rem !important;
+    margin-left: 0.28rem !important;
+    background-color: var(--color-text-muted) !important;
+    border: 0 !important;
+    border-radius: var(--radius-round) !important;
+    opacity: 0.42 !important;
+}
+
+.carousel-indicators .active {
+    width: 1.65rem !important;
+    background-color: var(--color-primary) !important;
+    opacity: 1 !important;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 4rem !important;
+    opacity: 1 !important;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 2.35rem !important;
+    height: 2.35rem !important;
+    padding: var(--padding-sm) !important;
+    background-color: color-mix(in srgb, var(--color-text-primary) 72%, transparent) !important;
+    background-size: 54% 54% !important;
+    border-radius: var(--radius-round) !important;
+    box-shadow: var(--shadow-sm) !important;
+}
+
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+    background-color: var(--color-primary) !important;
+}
+
+@media (max-width: 700px) {
+    .carousel-preview-surface {
+        min-height: 300px;
+        padding: var(--padding-xl);
+    }
+
+    .carousel-caption {
+        display: none !important;
+    }
+}

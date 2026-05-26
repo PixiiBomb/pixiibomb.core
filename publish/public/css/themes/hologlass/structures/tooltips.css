@@ -1,0 +1,113 @@
+/* =========================================================
+   HOLOGLASS TOOLTIPS
+   Futuristic glassmorphism tooltip overrides
+   ========================================================= */
+
+.tooltip {
+    --bs-tooltip-max-width: 280px;
+    --bs-tooltip-color: var(--color-text-primary);
+    --bs-tooltip-bg: var(--surface-glass-strong);
+    --bs-tooltip-border-radius: var(--radius-md);
+}
+
+.tooltip-inner {
+    position: relative !important;
+    overflow: hidden !important;
+
+    font-weight: 800 !important;
+    line-height: 1.45 !important;
+
+    background:
+        var(--scanline-gradient),
+        var(--gradient-hologlass),
+        var(--surface-glass-strong) !important;
+
+    border: 1px solid var(--border-glass) !important;
+
+    box-shadow:
+        inset 0 1px 0 color-mix(in srgb, white 24%, transparent),
+        var(--shadow-md),
+        var(--glow-primary) !important;
+
+    backdrop-filter: blur(var(--blur-sm));
+}
+
+.tooltip.bs-tooltip-top .tooltip-arrow::before {
+    border-top-color: var(--border-glass) !important;
+}
+
+.tooltip.bs-tooltip-end .tooltip-arrow::before {
+    border-right-color: var(--border-glass) !important;
+}
+
+.tooltip.bs-tooltip-bottom .tooltip-arrow::before {
+    border-bottom-color: var(--border-glass) !important;
+}
+
+.tooltip.bs-tooltip-start .tooltip-arrow::before {
+    border-left-color: var(--border-glass) !important;
+}
+
+/* =========================================================
+   CSS-ONLY HINTS
+   ========================================================= */
+
+.tooltip-hint {
+    color: var(--color-text-accent);
+    font-weight: 850;
+}
+
+.tooltip-hint:hover,
+.tooltip-hint:focus {
+    color: var(--color-primary);
+    text-shadow: var(--glow-primary);
+}
+
+.tooltip-hint::before,
+.tooltip-hint::after {
+    transition:
+        opacity 0.16s ease,
+        transform 0.16s ease;
+}
+
+.tooltip-hint::before {
+    max-width: 260px;
+
+    color: var(--color-text-primary);
+
+    background:
+        var(--scanline-gradient),
+        var(--gradient-hologlass),
+        var(--surface-glass-strong);
+
+    border: 1px solid var(--border-glass);
+    border-radius: var(--radius-md);
+
+    box-shadow:
+        inset 0 1px 0 color-mix(in srgb, white 24%, transparent),
+        var(--shadow-md),
+        var(--glow-primary);
+
+    backdrop-filter: blur(var(--blur-sm));
+
+    font-weight: 800;
+    line-height: 1.45;
+}
+
+.tooltip-hint::after {
+    bottom: calc(100% + 0.18rem);
+    border: 0.36rem solid transparent;
+    border-top-color: var(--border-glass);
+}
+
+.tooltip-hint-primary::before {
+    color: var(--color-text-on-primary);
+    background: var(--gradient-primary);
+    border-color: color-mix(in srgb, var(--color-primary) 72%, white 18%);
+}
+
+.tooltip-hint-danger::before {
+    color: var(--color-text-on-danger);
+    background: var(--gradient-danger);
+    border-color: color-mix(in srgb, var(--color-danger) 72%, white 12%);
+}

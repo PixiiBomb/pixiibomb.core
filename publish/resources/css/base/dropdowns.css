@@ -1,0 +1,101 @@
+/* =========================================================
+   BASE DROPDOWNS
+   Modern product UI dropdowns
+   ========================================================= */
+
+.dropdown-menu {
+    min-width: 14rem !important;
+    padding: var(--padding-sm) !important;
+    color: var(--color-text-primary) !important;
+    background: var(--color-bg-secondary) !important;
+    border: 1px solid var(--color-border-primary) !important;
+    border-radius: var(--radius-md) !important;
+    box-shadow: var(--shadow-md) !important;
+}
+
+.dropdown-header {
+    padding: var(--padding-sm) var(--padding-md) !important;
+    color: var(--color-text-muted) !important;
+    font-size: var(--font-xs) !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.04em !important;
+    text-transform: uppercase !important;
+}
+
+.dropdown-item {
+    padding: var(--padding-sm) var(--padding-md) !important;
+    color: var(--color-text-primary) !important;
+    font-size: var(--font-sm) !important;
+    font-weight: 650 !important;
+    border-radius: var(--radius-xs) !important;
+    transition:
+        background 0.14s ease,
+        color 0.14s ease !important;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+    color: var(--color-text-primary) !important;
+    background: var(--color-bg-variant) !important;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+    color: var(--color-text-on-primary) !important;
+    background: var(--color-primary) !important;
+}
+
+.dropdown-item.disabled,
+.dropdown-item:disabled {
+    color: var(--color-text-muted) !important;
+    opacity: 0.55 !important;
+    pointer-events: none !important;
+}
+
+.dropdown-divider {
+    margin: var(--padding-sm) 0 !important;
+    border-top: 1px solid var(--color-border-primary) !important;
+    opacity: 1 !important;
+}
+
+.dropdown-toggle::after {
+    margin-left: var(--padding-sm) !important;
+    vertical-align: 0.12em !important;
+}
+
+.dropdown-profile {
+    display: flex;
+    align-items: center;
+    gap: var(--padding-md);
+    padding: var(--padding-md);
+}
+
+.dropdown-profile div:last-child {
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown-profile strong {
+    color: var(--color-text-primary);
+}
+
+.dropdown-profile span {
+    color: var(--color-text-muted);
+    font-size: var(--font-sm);
+}
+
+.dropdown-avatar {
+    display: grid;
+    width: 44px;
+    height: 44px;
+    place-items: center;
+    color: var(--color-text-on-primary);
+    font-weight: 800;
+    background: var(--color-primary);
+    border-radius: var(--radius-round);
+}
+
+.logout-item {
+    width: 100%;
+    text-align: left;
+}

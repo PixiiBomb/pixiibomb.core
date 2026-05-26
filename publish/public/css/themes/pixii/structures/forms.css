@@ -1,0 +1,165 @@
+/* =========================================================
+   PIXII FORMS
+   Magical storybook form control overrides
+   ========================================================= */
+
+.form-label {
+    font-weight: 800 !important;
+}
+
+.form-control,
+.form-select {
+    min-height: 2.65rem !important;
+
+    background:
+        radial-gradient(
+            circle at 94% 90%,
+            color-mix(in srgb, var(--color-primary) 8%, transparent) 0%,
+            transparent 32%
+        ),
+        var(--color-bg-secondary) !important;
+
+    border-radius: var(--radius-md) !important;
+
+    font-weight: 650 !important;
+
+    box-shadow:
+        inset 0 1px 0 color-mix(in srgb, white 30%, transparent),
+        var(--shadow-sm) !important;
+
+    transition:
+        border-color 0.16s ease,
+        box-shadow 0.16s ease,
+        background 0.16s ease !important;
+}
+
+.form-control::placeholder {
+    opacity: 0.78 !important;
+}
+
+.form-control:hover,
+.form-select:hover {
+    border-color: var(--color-border-accent) !important;
+}
+
+.form-control:focus,
+.form-select:focus {
+    background:
+        radial-gradient(
+            circle at 94% 90%,
+            color-mix(in srgb, var(--color-primary) 13%, transparent) 0%,
+            transparent 32%
+        ),
+        var(--color-bg-secondary) !important;
+
+    box-shadow:
+        inset 0 1px 0 color-mix(in srgb, white 36%, transparent),
+        0 0 0 3px color-mix(in srgb, var(--color-primary) 24%, transparent),
+        0 10px 28px color-mix(in srgb, var(--color-primary) 12%, transparent) !important;
+}
+
+.form-control:disabled,
+.form-control[readonly],
+.form-select:disabled {
+    background: var(--color-bg-variant) !important;
+    opacity: 0.68 !important;
+    box-shadow: none !important;
+}
+
+.input-group {
+    border-radius: var(--radius-md) !important;
+}
+
+.input-group-text {
+    color: var(--color-text-primary) !important;
+
+    background:
+        radial-gradient(
+            circle at 90% 90%,
+            color-mix(in srgb, var(--color-primary) 12%, transparent) 0%,
+            transparent 32%
+        ),
+        var(--color-accent) !important;
+
+    font-weight: 850 !important;
+}
+
+.input-group .form-control,
+.input-group .form-select,
+.input-group .input-group-text,
+.input-group .btn {
+    min-height: 2.65rem !important;
+}
+
+.form-check {
+    min-height: 1.85rem !important;
+}
+
+.form-check-input {
+    width: 1.15rem !important;
+    height: 1.15rem !important;
+
+    box-shadow:
+        inset 0 1px 0 color-mix(in srgb, white 30%, transparent) !important;
+}
+
+.form-check-input:focus {
+    box-shadow:
+        0 0 0 3px color-mix(in srgb, var(--color-primary) 24%, transparent),
+        var(--shadow-sm) !important;
+}
+
+.form-check-label {
+    font-weight: 650 !important;
+}
+
+.form-switch .form-check-input {
+    width: 2.55rem !important;
+    height: 1.35rem !important;
+}
+
+.form-switch .form-check-input:checked {
+    background-image:
+        radial-gradient(
+            circle at 72% 50%,
+            white 0%,
+            white 26%,
+            transparent 27%
+        ) !important;
+}
+
+.form-range::-webkit-slider-thumb,
+.form-range::-moz-range-thumb {
+    background: var(--gradient-primary) !important;
+    border: 1px solid var(--color-primary-60) !important;
+    box-shadow: var(--shadow-sm) !important;
+}
+
+.form-control[type="file"]::file-selector-button {
+    background: var(--color-accent) !important;
+    font-weight: 850 !important;
+}
+
+.form-floating > .form-control,
+.form-floating > .form-select {
+    min-height: 3.75rem !important;
+}
+
+.form-control.is-valid,
+.was-validated .form-control:valid {
+    box-shadow:
+        0 0 0 3px color-mix(in srgb, var(--color-success) 18%, transparent),
+        var(--shadow-sm) !important;
+}
+
+.form-control.is-invalid,
+.was-validated .form-control:invalid {
+    box-shadow:
+        0 0 0 3px color-mix(in srgb, var(--color-danger) 18%, transparent),
+        var(--shadow-sm) !important;
+}
+
+.valid-feedback,
+.invalid-feedback {
+    font-weight: 800 !important;
+}

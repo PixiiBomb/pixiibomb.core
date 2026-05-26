@@ -1,0 +1,91 @@
+/* =========================================================
+   MIDNIGHT INK
+   Base Dark Palette
+   Dracula-inspired soft editor palette
+   ========================================================= */
+
+:root {
+    /* =========================================================
+       BACKGROUNDS
+       ========================================================= */
+
+    --color-bg-primary: #1f2330;
+    --color-bg-secondary: #282d3d;
+    --color-bg-variant: #31384b;
+
+    --color-bg: var(--color-bg-primary);
+
+    /* =========================================================
+       TEXT
+       ========================================================= */
+
+    --color-text-primary: #e6e9f2;
+    --color-text-secondary: #b9c0d4;
+    --color-text-accent: #c8b4ff;
+    --color-text-variant: #98a2be;
+    --color-text-muted: #727c96;
+
+    /* =========================================================
+       TEXT ON COLORS
+       ========================================================= */
+
+    --color-text-on-primary: #ffffff;
+    --color-text-on-secondary: #ffffff;
+    --color-text-on-accent: #ffffff;
+    --color-text-on-variant: #ffffff;
+
+    --color-text-on-success: #ffffff;
+    --color-text-on-danger: #ffffff;
+    --color-text-on-caution: #2f3444;
+    --color-text-on-note: #ffffff;
+
+    --color-text-on-light: #2f3444;
+    --color-text-on-dark: #ffffff;
+
+    /* =========================================================
+       BORDERS
+       ========================================================= */
+
+    --color-border-primary: #3a4258;
+    --color-border-secondary: #454d64;
+    --color-border-accent: #545d77;
+    --color-border-variant: #495169;
+
+    /* =========================================================
+       SEMANTIC / INTERACTIVE
+       ========================================================= */
+
+    --color-primary: #bd93f9;
+    --color-secondary: #7db38c;
+    --color-accent: #3d4255;
+    --color-variant: #34394c;
+
+    /* =========================================================
+       STATUS COLORS
+       ========================================================= */
+
+    --color-success: #4f8f6b;
+    --color-danger: #d47d91;
+    --color-caution: #d8b96d;
+    --color-note: #6c8ed9;
+
+    /* =========================================================
+       EFFECTS
+       ========================================================= */
+
+    --shadow-sm: 0 10px 24px rgba(0, 0, 0, 0.28);
+    --shadow-md: 0 18px 50px rgba(0, 0, 0, 0.34);
+
+    --blur-sm: 10px;
+    --blur-md: 14px;
+
+    /* =========================================================
+       GLASS SURFACES
+       ========================================================= */
+
+    --surface-glass: rgba(40, 45, 61, 0.82);
+    --surface-glass-soft: rgba(49, 56, 75, 0.76);
+    --surface-glass-strong: rgba(31, 35, 48, 0.92);
+
+    --border-glass: rgba(84, 93, 119, 0.55);
+}

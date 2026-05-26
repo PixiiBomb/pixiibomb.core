@@ -1,0 +1,191 @@
+/* =========================================================
+   BASE FORMS
+   Modern product UI form controls
+   ========================================================= */
+
+.form-label {
+    color: var(--color-text-primary) !important;
+    font-size: var(--font-sm) !important;
+    font-weight: 750 !important;
+    margin-bottom: var(--padding-xs) !important;
+}
+
+.form-text {
+    color: var(--color-text-muted) !important;
+    font-size: var(--font-xs) !important;
+}
+
+.form-control,
+.form-select {
+    min-height: 2.5rem !important;
+    padding: var(--padding-sm) var(--padding-md) !important;
+    color: var(--color-text-primary) !important;
+    background-color: var(--color-bg-secondary) !important;
+    border: 1px solid var(--color-border-primary) !important;
+    border-radius: var(--radius-sm) !important;
+    font-size: var(--font-sm) !important;
+    font-weight: 600 !important;
+    box-shadow: none !important;
+    transition:
+        border-color 0.14s ease,
+        box-shadow 0.14s ease,
+        background 0.14s ease !important;
+}
+
+textarea.form-control {
+    min-height: auto !important;
+}
+
+.form-control::placeholder {
+    color: var(--color-text-muted) !important;
+    opacity: 0.8 !important;
+}
+
+.form-control:hover,
+.form-select:hover {
+    border-color: var(--color-border-secondary) !important;
+}
+
+.form-control:focus,
+.form-select:focus option,
+.form-select:focus-visible option,
+.form-select:active option {
+    color: var(--color-text-primary) !important;
+    background-color: var(--color-bg-secondary) !important;
+    border-color: var(--color-primary) !important;
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-primary) 22%, transparent) !important;
+}
+
+.form-control:disabled,
+.form-control[readonly],
+.form-select:disabled {
+    color: var(--color-text-muted) !important;
+    background-color: var(--color-bg-variant) !important;
+    border-color: var(--color-border-primary) !important;
+    opacity: 0.7 !important;
+}
+
+.input-group-text {
+    color: var(--color-text-secondary) !important;
+    background: var(--color-bg-variant) !important;
+    border: 1px solid var(--color-border-primary) !important;
+    font-size: var(--font-sm) !important;
+    font-weight: 800 !important;
+}
+
+.input-group .form-control,
+.input-group .form-select,
+.input-group .input-group-text,
+.input-group .btn {
+    min-height: 2.5rem !important;
+}
+
+.form-check {
+    display: flex !important;
+    align-items: center !important;
+    gap: var(--padding-sm) !important;
+    min-height: 1.75rem !important;
+    padding-left: 0 !important;
+}
+
+.form-check-input {
+    width: 1.1rem !important;
+    height: 1.1rem !important;
+    margin: 0 !important;
+    background-color: var(--color-bg-secondary) !important;
+    border: 1px solid var(--color-border-primary) !important;
+    box-shadow: none !important;
+}
+
+.form-check-input:checked {
+    background-color: var(--color-primary) !important;
+    border-color: var(--color-primary) !important;
+}
+
+.form-check-input:focus {
+    border-color: var(--color-primary) !important;
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-primary) 22%, transparent) !important;
+}
+
+.form-check-label {
+    color: var(--color-text-primary) !important;
+    font-size: var(--font-sm) !important;
+    font-weight: 600 !important;
+}
+
+.form-switch .form-check-input {
+    width: 2.35rem !important;
+    height: 1.25rem !important;
+    border-radius: var(--radius-round) !important;
+}
+
+.form-range {
+    accent-color: var(--color-primary);
+}
+
+.form-range::-webkit-slider-thumb {
+    background: var(--color-primary) !important;
+}
+
+.form-range::-moz-range-thumb {
+    background: var(--color-primary) !important;
+}
+
+.form-control[type="file"]::file-selector-button {
+    color: var(--color-text-primary) !important;
+    background: var(--color-bg-variant) !important;
+    border: 0 !important;
+    border-right: 1px solid var(--color-border-primary) !important;
+    margin: calc(var(--padding-sm) * -1) var(--padding-md) calc(var(--padding-sm) * -1) calc(var(--padding-md) * -1) !important;
+    padding: var(--padding-sm) var(--padding-md) !important;
+    font-weight: 800 !important;
+}
+
+.form-floating > label {
+    color: var(--color-text-muted) !important;
+}
+
+.form-floating > .form-control,
+.form-floating > .form-select {
+    min-height: 3.6rem !important;
+}
+
+.form-control.is-valid,
+.was-validated .form-control:valid {
+    border-color: var(--color-success) !important;
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-success) 18%, transparent) !important;
+}
+
+.form-control.is-invalid,
+.was-validated .form-control:invalid {
+    border-color: var(--color-danger) !important;
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-danger) 18%, transparent) !important;
+}
+
+.valid-feedback {
+    color: var(--color-success-80) !important;
+    font-weight: 700 !important;
+}
+
+.invalid-feedback {
+    color: var(--color-danger-80) !important;
+    font-weight: 700 !important;
+}
+
+.form-control:-webkit-autofill,
+.form-control:-webkit-autofill:hover,
+.form-control:-webkit-autofill:focus,
+.form-control:-webkit-autofill:active {
+    -webkit-text-fill-color: var(--color-text-primary) !important;
+    caret-color: var(--color-text-primary) !important;
+    box-shadow:
+        0 0 0 1000px var(--color-bg-secondary) inset,
+        0 0 0 3px color-mix(in srgb, var(--color-primary) 22%, transparent) !important;
+    border-color: var(--color-primary) !important;
+    transition: background-color 9999s ease-in-out 0s !important;
+}
+
+.form-control:autofill {
+    color: var(--color-text-primary) !important;
+    background-color: var(--color-bg-secondary) !important;
+}

@@ -1,0 +1,135 @@
+/* =========================================================
+   PIXII MODALS
+   Magical storybook modal overrides
+   ========================================================= */
+
+.modal-backdrop {
+    background:
+        radial-gradient(
+            circle at 50% 42%,
+            color-mix(in srgb, var(--color-primary) 28%, transparent) 0%,
+            transparent 36%
+        ),
+        color-mix(in srgb, black 68%, var(--color-bg-primary) 32%) !important;
+}
+
+.modal-backdrop.show {
+    opacity: 0.72 !important;
+}
+
+.modal-content {
+    position: relative !important;
+    isolation: isolate !important;
+
+    background:
+        radial-gradient(
+            circle at 94% 92%,
+            color-mix(in srgb, var(--color-primary) 13%, transparent) 0%,
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 10% 8%,
+            color-mix(in srgb, white 18%, transparent) 0%,
+            transparent 28%
+        ),
+        var(--color-bg-secondary) !important;
+
+    border-radius: calc(var(--radius-lg) * 1.15) !important;
+
+    box-shadow:
+        inset 0 1px 0 color-mix(in srgb, white 36%, transparent),
+        var(--shadow-md),
+        0 0 36px color-mix(in srgb, var(--color-primary) 18%, transparent) !important;
+}
+
+.modal-content::before {
+    content: "✿";
+    position: absolute;
+    right: -0.8rem;
+    bottom: -1.1rem;
+    z-index: -1;
+
+    color: color-mix(in srgb, var(--color-primary) 18%, transparent);
+    font-size: 5rem;
+    line-height: 1;
+
+    opacity: 0.44;
+    transform: rotate(-18deg);
+    pointer-events: none;
+}
+
+.modal-content::after {
+    content: "✧";
+    position: absolute;
+    top: var(--padding-lg);
+    right: calc(var(--padding-xl) * 2.5);
+
+    color: color-mix(in srgb, white 72%, transparent);
+    font-size: 1rem;
+
+    opacity: 0.85;
+    pointer-events: none;
+}
+
+.modal-body {
+    line-height: 1.65 !important;
+}
+
+.btn-close {
+    opacity: 0.68 !important;
+}
+
+.btn-close:hover {
+    background-color: color-mix(in srgb, var(--color-primary) 14%, transparent) !important;
+}
+
+/* Classic modal */
+
+.classic-modal .modal-header {
+    background:
+        radial-gradient(
+            circle at 94% 88%,
+            color-mix(in srgb, var(--color-primary) 12%, transparent) 0%,
+            transparent 30%
+        ),
+        var(--color-accent) !important;
+}
+
+.classic-modal .modal-footer {
+    background:
+        linear-gradient(
+            180deg,
+            color-mix(in srgb, var(--color-accent) 82%, transparent) 0%,
+            var(--color-accent) 100%
+        ) !important;
+}
+
+/* Modern modal */
+
+.modern-modal .modal-header,
+.modern-modal .modal-footer {
+    border: 0 !important;
+    background: transparent !important;
+}
+
+.modal-preview-card {
+    background:
+        radial-gradient(
+            circle at 92% 88%,
+            color-mix(in srgb, var(--color-primary) 10%, transparent) 0%,
+            transparent 32%
+        ),
+        var(--color-accent);
+
+    border-radius: var(--radius-lg);
+
+    box-shadow: var(--shadow-sm);
+}
+
+/* Danger modal */
+
+.danger-modal::before {
+    content: "!";
+    color: color-mix(in srgb, var(--color-danger-80) 22%, transparent);
+    font-weight: 900;
+}

@@ -1,0 +1,76 @@
+/* =========================================================
+   BASE BADGES
+   Modern product UI badges
+   ========================================================= */
+
+.badge {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: var(--padding-xs) !important;
+
+    min-height: 1.35rem !important;
+    padding: 0.28rem 0.55rem !important;
+
+    font-size: var(--font-xs) !important;
+    font-weight: 800 !important;
+    line-height: 1 !important;
+    letter-spacing: -0.01em !important;
+
+    border: 1px solid transparent !important;
+    border-radius: var(--radius-xs) !important;
+    box-shadow: none !important;
+}
+
+.badge.rounded-pill {
+    border-radius: var(--radius-round) !important;
+    padding-inline: 0.65rem !important;
+}
+
+.badge.text-bg-primary {
+    color: var(--color-text-on-primary) !important;
+    background: var(--color-primary) !important;
+    border-color: var(--color-primary-60) !important;
+}
+
+.badge.text-bg-secondary {
+    color: var(--color-text-primary) !important;
+    background: var(--color-bg-variant) !important;
+    border-color: var(--color-border-primary) !important;
+}
+
+.badge.text-bg-success {
+    color: var(--color-text-on-success) !important;
+    background: var(--color-success) !important;
+    border-color: var(--color-success-60) !important;
+}
+
+.badge.text-bg-danger {
+    color: var(--color-text-on-danger) !important;
+    background: var(--color-danger) !important;
+    border-color: var(--color-danger-60) !important;
+}
+
+.badge.text-bg-warning {
+    color: var(--color-text-on-caution) !important;
+    background: var(--color-caution) !important;
+    border-color: var(--color-caution-60) !important;
+}
+
+.badge.text-bg-info {
+    color: var(--color-text-on-note) !important;
+    background: var(--color-note) !important;
+    border-color: var(--color-note-60) !important;
+}
+
+.badge.text-bg-light {
+    color: var(--color-text-on-light) !important;
+    background: var(--color-bg-secondary) !important;
+    border-color: var(--color-border-primary) !important;
+}
+
+.badge.text-bg-dark {
+    color: var(--color-text-on-dark) !important;
+    background: var(--color-text-primary) !important;
+    border-color: var(--color-text-primary) !important;
+}

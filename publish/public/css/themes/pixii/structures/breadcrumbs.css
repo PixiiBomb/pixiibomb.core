@@ -1,0 +1,105 @@
+/* =========================================================
+   PIXII BREADCRUMBS
+   Magical storybook breadcrumb overrides
+   ========================================================= */
+
+.breadcrumb-item {
+    font-weight: 700;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    color: color-mix(in srgb, var(--color-primary) 50%, transparent);
+    content: "✧";
+}
+
+.breadcrumb-item a {
+    transition:
+        color 0.16s ease,
+        transform 0.16s ease;
+}
+
+.breadcrumb-item a:hover {
+    transform: translateY(-1px);
+}
+
+.breadcrumb-item.active {
+    font-weight: 850;
+}
+
+/* =========================================================
+   ROUNDED
+   ========================================================= */
+
+.breadcrumb-rounded {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 96% 92%,
+            color-mix(in srgb, var(--color-primary) 10%, transparent) 0%,
+            transparent 32%
+        ),
+        var(--color-bg-secondary);
+
+    box-shadow:
+        inset 0 1px 0 color-mix(in srgb, white 28%, transparent),
+        var(--shadow-sm);
+}
+
+.breadcrumb-rounded::before {
+    content: "✿";
+
+    position: absolute;
+    right: -0.55rem;
+    bottom: -0.95rem;
+    z-index: -1;
+
+    color: color-mix(in srgb, var(--color-primary) 16%, transparent);
+    font-size: 3.6rem;
+
+    opacity: 0.34;
+    transform: rotate(-18deg);
+
+    pointer-events: none;
+}
+
+/* =========================================================
+   PILLS
+   ========================================================= */
+
+.breadcrumb-pills .breadcrumb-item {
+    background: var(--color-accent);
+}
+
+.breadcrumb-pills .breadcrumb-item.active {
+    background: var(--gradient-primary);
+}
+
+/* =========================================================
+   TAILWIND STYLE
+   ========================================================= */
+
+.tailwind-breadcrumb {
+    font-weight: 700;
+}
+
+.tailwind-breadcrumb a {
+    transition:
+        color 0.16s ease,
+        transform 0.16s ease;
+}
+
+.tailwind-breadcrumb a:hover {
+    transform: translateY(-1px);
+}
+
+.tailwind-breadcrumb span {
+    color: color-mix(in srgb, var(--color-primary) 48%, transparent);
+}
+
+.tailwind-breadcrumb strong::after {
+    content: " ✧";
+    color: var(--color-primary);
+}

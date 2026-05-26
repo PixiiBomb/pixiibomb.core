@@ -1,0 +1,176 @@
+/* =========================================================
+   HOLOGLASS ALERTS
+   Futuristic glassmorphism alert overrides
+   ========================================================= */
+
+.alert {
+    isolation: isolate !important;
+    overflow: hidden !important;
+
+    background:
+        var(--scanline-gradient),
+        var(--gradient-hologlass),
+        var(--surface-glass) !important;
+
+    border-color: var(--border-glass) !important;
+    border-radius: var(--radius-lg) !important;
+
+    box-shadow:
+        inset 0 1px 0 color-mix(in srgb, white 24%, transparent),
+        var(--shadow-sm) !important;
+
+    backdrop-filter: blur(var(--blur-sm));
+}
+
+.alert::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    background:
+        radial-gradient(
+            circle at 94% 14%,
+            color-mix(in srgb, var(--color-primary) 20%, transparent) 0%,
+            transparent 34%
+        ),
+        radial-gradient(
+            circle at 10% 88%,
+            color-mix(in srgb, var(--color-secondary) 14%, transparent) 0%,
+            transparent 36%
+        );
+
+    opacity: 0.72;
+    pointer-events: none;
+}
+
+.alert::after {
+    content: "";
+    position: absolute;
+    top: -45%;
+    left: -24%;
+    width: 38%;
+    height: 190%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            color-mix(in srgb, white 26%, transparent),
+            transparent
+        );
+
+    opacity: 0.22;
+    transform: rotate(18deg);
+    pointer-events: none;
+}
+
+.alert-link {
+    color: currentColor !important;
+    text-decoration-thickness: 2px !important;
+}
+
+.alert-dismissible {
+    padding-right: calc(var(--padding-xl) * 2.35) !important;
+}
+
+.alert .btn-close {
+    top: var(--padding-lg) !important;
+    transform: none !important;
+}
+
+.alert .btn-close:hover {
+    background-color: color-mix(in srgb, var(--color-primary) 14%, transparent) !important;
+}
+
+/* =========================================================
+   VARIANTS
+   ========================================================= */
+
+.alert-primary {
+    color: var(--color-text-on-primary) !important;
+    background:
+        var(--scanline-gradient),
+        var(--gradient-primary) !important;
+    border-color: color-mix(in srgb, var(--color-primary) 72%, white 18%) !important;
+    box-shadow:
+        inset 0 1px 0 color-mix(in srgb, white 32%, transparent),
+        var(--shadow-sm),
+        var(--glow-primary) !important;
+}
+
+.alert-secondary {
+    color: var(--color-text-primary) !important;
+    background:
+        var(--scanline-gradient),
+        var(--gradient-hologlass),
+        var(--surface-glass) !important;
+    border-color: var(--border-glass) !important;
+}
+
+.alert-success {
+    color: var(--color-text-on-success) !important;
+    background:
+        var(--scanline-gradient),
+        var(--gradient-success) !important;
+    border-color: color-mix(in srgb, var(--color-success) 72%, white 12%) !important;
+}
+
+.alert-danger {
+    color: var(--color-text-on-danger) !important;
+    background:
+        var(--scanline-gradient),
+        var(--gradient-danger) !important;
+    border-color: color-mix(in srgb, var(--color-danger) 72%, white 12%) !important;
+}
+
+.alert-warning {
+    color: var(--color-text-on-caution) !important;
+    background:
+        var(--scanline-gradient),
+        var(--gradient-caution) !important;
+    border-color: color-mix(in srgb, var(--color-caution) 72%, white 12%) !important;
+}
+
+.alert-info {
+    color: var(--color-text-on-note) !important;
+    background:
+        var(--scanline-gradient),
+        var(--gradient-note) !important;
+    border-color: color-mix(in srgb, var(--color-note) 72%, white 12%) !important;
+}
+
+.alert-success,
+.alert-danger,
+.alert-warning,
+.alert-info {
+    box-shadow:
+        inset 0 1px 0 color-mix(in srgb, white 28%, transparent),
+        var(--shadow-sm) !important;
+}
+
+.alert-light {
+    color: var(--color-text-on-light) !important;
+    background:
+        var(--scanline-gradient),
+        var(--gradient-hologlass),
+        var(--surface-glass-strong) !important;
+    border-color: var(--border-glass) !important;
+}
+
+.alert-dark {
+    color: var(--color-text-on-dark) !important;
+    background:
+        var(--scanline-gradient),
+        radial-gradient(
+            circle at 88% 18%,
+            color-mix(in srgb, var(--color-primary) 24%, transparent) 0%,
+            transparent 36%
+        ),
+        color-mix(in srgb, black 42%, var(--color-bg-primary) 58%) !important;
+    border-color: color-mix(in srgb, var(--color-primary) 34%, white 10%) !important;
+    box-shadow:
+        inset 0 1px 0 color-mix(in srgb, white 14%, transparent),
+        var(--shadow-sm),
+        var(--glow-primary) !important;
+}

@@ -1,0 +1,309 @@
+/* =========================================================
+   HOLOGLASS BUTTONS
+   Futuristic glassmorphism button overrides
+   ========================================================= */
+
+.btn {
+    isolation: isolate !important;
+    overflow: hidden !important;
+
+    border-radius: var(--radius-round) !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.01em !important;
+
+    transition:
+        transform 0.16s ease,
+        box-shadow 0.16s ease,
+        border-color 0.16s ease,
+        background 0.16s ease,
+        color 0.16s ease,
+        filter 0.16s ease !important;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    background:
+        linear-gradient(
+            115deg,
+            transparent 0%,
+            color-mix(in srgb, white 24%, transparent) 45%,
+            transparent 62%
+        );
+
+    opacity: 0;
+    transform: translateX(-65%);
+    transition:
+        opacity 0.18s ease,
+        transform 0.18s ease;
+    pointer-events: none;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    filter: saturate(1.08);
+}
+
+.btn:hover::before {
+    opacity: 0.8;
+    transform: translateX(65%);
+}
+
+.btn:active,
+.btn.active,
+.show > .btn.dropdown-toggle {
+    transform: translateY(0) scale(0.985);
+}
+
+.btn:focus,
+.btn:focus-visible {
+    box-shadow:
+        0 0 0 3px color-mix(in srgb, var(--color-primary) 28%, transparent),
+        var(--glow-primary) !important;
+}
+
+/* =========================================================
+   SOLID BUTTONS
+   ========================================================= */
+
+.btn-primary {
+    color: var(--color-text-on-primary) !important;
+    background: var(--gradient-primary) !important;
+    border-color: color-mix(in srgb, var(--color-primary) 68%, white 18%) !important;
+    box-shadow:
+        inset 0 1px 0 color-mix(in srgb, white 34%, transparent),
+        var(--shadow-sm),
+        var(--glow-primary) !important;
+}
+
+.btn-primary:hover {
+    background: var(--gradient-primary-hover) !important;
+    border-color: color-mix(in srgb, var(--color-primary) 78%, white 22%) !important;
+    box-shadow:
+        inset 0 1px 0 color-mix(in srgb, white 38%, transparent),
+        var(--shadow-md),
+        var(--glow-primary) !important;
+}
+
+.btn-secondary {
+    color: var(--color-text-primary) !important;
+    background:
+        var(--gradient-hologlass),
+        var(--surface-glass) !important;
+    border-color: var(--border-glass) !important;
+    box-shadow:
+        inset 0 1px 0 color-mix(in srgb, white 24%, transparent),
+        var(--shadow-sm) !important;
+    backdrop-filter: blur(var(--blur-sm));
+}
+
+.btn-secondary:hover {
+    background:
+        var(--gradient-hologram),
+        var(--surface-glass-strong) !important;
+    border-color: var(--color-border-accent) !important;
+    box-shadow:
+        inset 0 1px 0 color-mix(in srgb, white 30%, transparent),
+        var(--shadow-md),
+        var(--glow-accent) !important;
+}
+
+.btn-success {
+    color: var(--color-text-on-success) !important;
+    background: var(--gradient-success) !important;
+    border-color: color-mix(in srgb, var(--color-success) 72%, white 12%) !important;
+}
+
+.btn-danger {
+    color: var(--color-text-on-danger) !important;
+    background: var(--gradient-danger) !important;
+    border-color: color-mix(in srgb, var(--color-danger) 72%, white 12%) !important;
+}
+
+.btn-warning {
+    color: var(--color-text-on-caution) !important;
+    background: var(--gradient-caution) !important;
+    border-color: color-mix(in srgb, var(--color-caution) 72%, white 12%) !important;
+}
+
+.btn-info {
+    color: var(--color-text-on-note) !important;
+    background: var(--gradient-note) !important;
+    border-color: color-mix(in srgb, var(--color-note) 72%, white 12%) !important;
+}
+
+.btn-success,
+.btn-danger,
+.btn-warning,
+.btn-info {
+    box-shadow:
+        inset 0 1px 0 color-mix(in srgb, white 28%, transparent),
+        var(--shadow-sm) !important;
+}
+
+.btn-success:hover,
+.btn-danger:hover,
+.btn-warning:hover,
+.btn-info:hover {
+    box-shadow:
+        inset 0 1px 0 color-mix(in srgb, white 34%, transparent),
+        var(--shadow-md),
+        var(--glow-primary) !important;
+}
+
+.btn-light {
+    color: var(--color-text-on-light) !important;
+    background:
+        var(--gradient-hologlass),
+        var(--surface-glass-strong) !important;
+    border-color: var(--border-glass) !important;
+    box-shadow:
+        inset 0 1px 0 color-mix(in srgb, white 32%, transparent),
+        var(--shadow-sm) !important;
+    backdrop-filter: blur(var(--blur-sm));
+}
+
+.btn-dark {
+    color: var(--color-text-on-dark) !important;
+    background:
+        radial-gradient(
+            circle at 88% 18%,
+            color-mix(in srgb, var(--color-primary) 24%, transparent) 0%,
+            transparent 36%
+        ),
+        color-mix(in srgb, black 42%, var(--color-bg-primary) 58%) !important;
+    border-color: color-mix(in srgb, var(--color-primary) 34%, white 10%) !important;
+    box-shadow:
+        inset 0 1px 0 color-mix(in srgb, white 14%, transparent),
+        var(--shadow-sm),
+        var(--glow-primary) !important;
+}
+
+/* =========================================================
+   OUTLINE BUTTONS
+   ========================================================= */
+
+.btn-outline-primary,
+.btn-outline-secondary,
+.btn-outline-success,
+.btn-outline-danger,
+.btn-outline-warning,
+.btn-outline-info,
+.btn-outline-light,
+.btn-outline-dark {
+    background:
+        var(--gradient-hologlass),
+        var(--surface-glass-soft) !important;
+    border-color: var(--border-glass) !important;
+    box-shadow:
+        inset 0 1px 0 color-mix(in srgb, white 20%, transparent),
+        var(--shadow-sm) !important;
+    backdrop-filter: blur(var(--blur-sm));
+}
+
+.btn-outline-primary {
+    color: var(--color-primary) !important;
+}
+
+.btn-outline-secondary {
+    color: var(--color-secondary) !important;
+}
+
+.btn-outline-success {
+    color: var(--color-success) !important;
+}
+
+.btn-outline-danger {
+    color: var(--color-danger) !important;
+}
+
+.btn-outline-warning {
+    color: var(--color-caution) !important;
+}
+
+.btn-outline-info {
+    color: var(--color-note) !important;
+}
+
+.btn-outline-light,
+.btn-outline-dark {
+    color: var(--color-text-primary) !important;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-secondary:hover,
+.btn-outline-success:hover,
+.btn-outline-danger:hover,
+.btn-outline-warning:hover,
+.btn-outline-info:hover,
+.btn-outline-light:hover,
+.btn-outline-dark:hover {
+    color: var(--color-text-on-primary) !important;
+    background: var(--gradient-primary) !important;
+    border-color: color-mix(in srgb, var(--color-primary) 72%, white 16%) !important;
+    box-shadow:
+        inset 0 1px 0 color-mix(in srgb, white 34%, transparent),
+        var(--shadow-md),
+        var(--glow-primary) !important;
+}
+
+/* =========================================================
+   LINK BUTTON
+   ========================================================= */
+
+.btn-link {
+    color: var(--color-text-accent) !important;
+}
+
+.btn-link::before {
+    display: none;
+}
+
+.btn-link:hover {
+    color: var(--color-primary) !important;
+    text-shadow: var(--glow-primary);
+    text-decoration-thickness: 2px !important;
+}
+
+/* =========================================================
+   BUTTON GROUPS
+   ========================================================= */
+
+.btn-group > .btn,
+.btn-group-vertical > .btn {
+    box-shadow: none !important;
+}
+
+.btn-group > .btn:hover,
+.btn-group > .btn:focus,
+.btn-group > .btn:active,
+.btn-group > .btn.active,
+.btn-group-vertical > .btn:hover,
+.btn-group-vertical > .btn:focus,
+.btn-group-vertical > .btn:active,
+.btn-group-vertical > .btn.active {
+    z-index: 3 !important;
+    box-shadow:
+        inset 0 1px 0 color-mix(in srgb, white 24%, transparent),
+        var(--glow-primary) !important;
+}
+
+/* =========================================================
+   BUTTON SIZES
+   ========================================================= */
+
+.btn-md,
+.btn {
+    border-radius: var(--radius-round) !important;
+}
+
+.btn-sm {
+    border-radius: var(--radius-round) !important;
+}
+
+.btn-lg {
+    border-radius: var(--radius-round) !important;
+}

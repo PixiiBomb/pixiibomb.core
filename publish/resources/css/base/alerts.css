@@ -1,0 +1,106 @@
+/* =========================================================
+   BASE ALERTS
+   Modern product UI alerts
+   ========================================================= */
+
+.alert {
+    position: relative !important;
+    padding: var(--padding-lg) var(--padding-xl) !important;
+    color: var(--color-text-primary) !important;
+    background: var(--color-bg-secondary) !important;
+    border: 1px solid var(--color-border-primary) !important;
+    border-radius: var(--radius-md) !important;
+    box-shadow: var(--shadow-sm) !important;
+}
+
+.alert strong,
+.alert-heading {
+    color: inherit !important;
+}
+
+.alert p {
+    color: inherit !important;
+}
+
+.alert hr {
+    border-color: currentColor !important;
+    opacity: 0.16 !important;
+}
+
+.alert-link {
+    color: inherit !important;
+    font-weight: 800 !important;
+    text-decoration: underline !important;
+    text-underline-offset: 0.18em !important;
+}
+
+.alert-primary {
+    color: var(--color-text-on-primary) !important;
+    background:
+        linear-gradient(
+            180deg,
+            color-mix(in srgb, white 8%, var(--color-primary) 92%) 0%,
+            var(--color-primary) 100%
+        ) !important;
+    border-color: var(--color-primary-60) !important;
+}
+
+.alert-secondary {
+    color: var(--color-text-primary) !important;
+    background: var(--color-bg-secondary) !important;
+    border-color: var(--color-border-secondary) !important;
+}
+
+.alert-success {
+    color: var(--color-text-on-success) !important;
+    background: var(--color-success) !important;
+    border-color: var(--color-success-60) !important;
+}
+
+.alert-danger {
+    color: var(--color-text-on-danger) !important;
+    background: var(--color-danger) !important;
+    border-color: var(--color-danger-60) !important;
+}
+
+.alert-warning {
+    color: var(--color-text-on-caution) !important;
+    background: var(--color-caution) !important;
+    border-color: var(--color-caution-60) !important;
+}
+
+.alert-info {
+    color: var(--color-text-on-note) !important;
+    background: var(--color-note) !important;
+    border-color: var(--color-note-60) !important;
+}
+
+.alert-light {
+    color: var(--color-text-on-light) !important;
+    background: var(--color-bg-secondary) !important;
+    border-color: var(--color-border-primary) !important;
+}
+
+.alert-dark {
+    color: var(--color-text-on-dark) !important;
+    background: var(--color-text-primary) !important;
+    border-color: var(--color-text-primary) !important;
+}
+
+.alert-dismissible {
+    padding-right: calc(var(--padding-xl) * 2.25) !important;
+}
+
+.alert .btn-close {
+    top: 50% !important;
+    right: var(--padding-lg) !important;
+    transform: translateY(-50%) !important;
+    padding: var(--padding-sm) !important;
+    border-radius: var(--radius-round) !important;
+    opacity: 0.72 !important;
+}
+
+.alert .btn-close:hover {
+    opacity: 1 !important;
+    background-color: color-mix(in srgb, currentColor 10%, transparent) !important;
+}

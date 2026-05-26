@@ -1,0 +1,126 @@
+/* =========================================================
+   PIXII BADGES
+   Magical storybook badge overrides
+   ========================================================= */
+
+.badge {
+    position: relative !important;
+    isolation: isolate !important;
+    overflow: hidden !important;
+
+    min-height: 1.45rem !important;
+    padding: 0.32rem 0.7rem !important;
+
+    font-weight: 850 !important;
+    letter-spacing: 0.005em !important;
+
+    border-radius: var(--radius-sm) !important;
+
+    box-shadow:
+        inset 0 1px 0 color-mix(in srgb, white 38%, transparent),
+        0 8px 18px color-mix(in srgb, var(--color-primary) 14%, transparent) !important;
+}
+
+.badge::before {
+    content: "✦";
+    position: absolute;
+    right: -0.15rem;
+    bottom: -0.3rem;
+    z-index: -1;
+
+    color: color-mix(in srgb, white 40%, transparent);
+    font-size: 1.25rem;
+    line-height: 1;
+
+    opacity: 0.45;
+    transform: rotate(-15deg);
+    pointer-events: none;
+}
+
+.badge.rounded-pill {
+    padding-inline: 0.8rem !important;
+}
+
+.text-bg-primary {
+    background:
+        radial-gradient(
+            circle at 18% 16%,
+            color-mix(in srgb, white 38%, transparent) 0%,
+            transparent 32%
+        ),
+        var(--gradient-primary) !important;
+}
+
+.text-bg-secondary {
+    background:
+        radial-gradient(
+            circle at 85% 85%,
+            color-mix(in srgb, var(--color-primary) 12%, transparent) 0%,
+            transparent 34%
+        ),
+        var(--color-bg-secondary) !important;
+}
+
+.text-bg-success,
+.text-bg-danger,
+.text-bg-warning,
+.text-bg-info {
+    color: var(--color-text-primary) !important;
+}
+
+.text-bg-success {
+    background: var(--gradient-success) !important;
+}
+
+.text-bg-success::before {
+    content: "✓";
+}
+
+.text-bg-danger {
+    background: var(--gradient-danger) !important;
+}
+
+.text-bg-danger::before {
+    content: "!";
+    font-weight: 900;
+}
+
+.text-bg-warning {
+    background: var(--gradient-caution) !important;
+}
+
+.text-bg-warning::before {
+    content: "⚠";
+}
+
+.text-bg-info {
+    background: var(--gradient-note) !important;
+}
+
+.text-bg-info::before {
+    content: "i";
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-weight: 900;
+}
+
+.text-bg-light {
+    background:
+        radial-gradient(
+            circle at 18% 16%,
+            color-mix(in srgb, var(--color-accent) 48%, transparent) 0%,
+            transparent 32%
+        ),
+        var(--color-bg-secondary) !important;
+}
+
+.text-bg-dark {
+    background:
+        radial-gradient(
+            circle at 88% 90%,
+            color-mix(in srgb, var(--color-primary) 18%, transparent) 0%,
+            transparent 34%
+        ),
+        var(--color-text-primary) !important;
+    border-color: color-mix(in srgb, var(--color-text-primary) 80%, white 20%) !important;
+}

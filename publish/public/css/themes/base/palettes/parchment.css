@@ -1,0 +1,91 @@
+/* =========================================================
+   PARCHMENT
+   Base Light Palette
+   Warm paper / soft Bootstrap replacement
+   ========================================================= */
+
+:root {
+    /* =========================================================
+       BACKGROUNDS
+       ========================================================= */
+
+    --color-bg-primary: #f8f6f2;
+    --color-bg-secondary: #fffdfb;
+    --color-bg-variant: #efebe5;
+
+    --color-bg: var(--color-bg-primary);
+
+    /* =========================================================
+       TEXT
+       ========================================================= */
+
+    --color-text-primary: #4f463f;
+    --color-text-secondary: #736860;
+    --color-text-accent: #9b7d73;
+    --color-text-variant: #8d8179;
+    --color-text-muted: #aaa097;
+
+    /* =========================================================
+       TEXT ON COLORS
+       ========================================================= */
+
+    --color-text-on-primary: #ffffff;
+    --color-text-on-secondary: #ffffff;
+    --color-text-on-accent: #ffffff;
+    --color-text-on-variant: #ffffff;
+
+    --color-text-on-success: #445247;
+    --color-text-on-danger: #5f4146;
+    --color-text-on-caution: #5f563d;
+    --color-text-on-note: #4d5870;
+
+    --color-text-on-light: #4f463f;
+    --color-text-on-dark: #ffffff;
+
+    /* =========================================================
+       BORDERS
+       ========================================================= */
+
+    --color-border-primary: #ddd5cd;
+    --color-border-secondary: #d5ccc4;
+    --color-border-accent: #e5d8d0;
+    --color-border-variant: #dcd6d0;
+
+    /* =========================================================
+       SEMANTIC / INTERACTIVE
+       ========================================================= */
+
+    --color-primary: #b68d7d;
+    --color-secondary: #aebba3;
+    --color-accent: #efe3dc;
+    --color-variant: #e8e1db;
+
+    /* =========================================================
+       STATUS COLORS
+       ========================================================= */
+
+    --color-success: #dbe7d8;
+    --color-danger: #ebccd1;
+    --color-caution: #f0e1ba;
+    --color-note: #d7e1ef;
+
+    /* =========================================================
+       EFFECTS
+       ========================================================= */
+
+    --shadow-sm: 0 10px 20px rgba(120, 96, 84, 0.10);
+    --shadow-md: 0 16px 40px rgba(79, 70, 63, 0.10);
+
+    --blur-sm: 10px;
+    --blur-md: 12px;
+
+    /* =========================================================
+       GLASS SURFACES
+       ========================================================= */
+
+    --surface-glass: rgba(255, 253, 251, 0.88);
+    --surface-glass-soft: rgba(250, 247, 244, 0.82);
+    --surface-glass-strong: rgba(255, 255, 255, 0.94);
+
+    --border-glass: rgba(221, 213, 205, 0.82);
+}

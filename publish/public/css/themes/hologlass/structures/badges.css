@@ -1,0 +1,109 @@
+/* =========================================================
+   HOLOGLASS BADGES
+   Futuristic glassmorphism badge overrides
+   ========================================================= */
+
+.badge {
+    position: relative !important;
+    isolation: isolate !important;
+    overflow: hidden !important;
+
+    min-height: 1.45rem !important;
+    padding: 0.32rem 0.68rem !important;
+
+    font-weight: 850 !important;
+    letter-spacing: 0.025em !important;
+
+    border-radius: var(--radius-round) !important;
+
+    box-shadow:
+        inset 0 1px 0 color-mix(in srgb, white 28%, transparent),
+        var(--shadow-sm) !important;
+}
+
+.badge::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    background:
+        linear-gradient(
+            115deg,
+            transparent 0%,
+            color-mix(in srgb, white 28%, transparent) 46%,
+            transparent 64%
+        );
+
+    opacity: 0.35;
+    pointer-events: none;
+}
+
+.badge.rounded-pill {
+    padding-inline: 0.82rem !important;
+}
+
+.text-bg-primary {
+    background: var(--gradient-primary) !important;
+    border-color: color-mix(in srgb, var(--color-primary) 72%, white 18%) !important;
+    box-shadow:
+        inset 0 1px 0 color-mix(in srgb, white 32%, transparent),
+        var(--glow-primary) !important;
+}
+
+.text-bg-secondary {
+    color: var(--color-text-primary) !important;
+    background:
+        var(--gradient-hologlass),
+        var(--surface-glass) !important;
+    border-color: var(--border-glass) !important;
+    backdrop-filter: blur(var(--blur-sm));
+}
+
+.text-bg-success {
+    color: var(--color-text-on-success) !important;
+    background: var(--gradient-success) !important;
+    border-color: color-mix(in srgb, var(--color-success) 72%, white 12%) !important;
+}
+
+.text-bg-danger {
+    color: var(--color-text-on-danger) !important;
+    background: var(--gradient-danger) !important;
+    border-color: color-mix(in srgb, var(--color-danger) 72%, white 12%) !important;
+}
+
+.text-bg-warning {
+    color: var(--color-text-on-caution) !important;
+    background: var(--gradient-caution) !important;
+    border-color: color-mix(in srgb, var(--color-caution) 72%, white 12%) !important;
+}
+
+.text-bg-info {
+    color: var(--color-text-on-note) !important;
+    background: var(--gradient-note) !important;
+    border-color: color-mix(in srgb, var(--color-note) 72%, white 12%) !important;
+}
+
+.text-bg-light {
+    color: var(--color-text-on-light) !important;
+    background:
+        var(--gradient-hologlass),
+        var(--surface-glass-strong) !important;
+    border-color: var(--border-glass) !important;
+    backdrop-filter: blur(var(--blur-sm));
+}
+
+.text-bg-dark {
+    color: var(--color-text-on-dark) !important;
+    background:
+        radial-gradient(
+            circle at 86% 18%,
+            color-mix(in srgb, var(--color-primary) 22%, transparent) 0%,
+            transparent 34%
+        ),
+        color-mix(in srgb, black 42%, var(--color-bg-primary) 58%) !important;
+    border-color: color-mix(in srgb, var(--color-primary) 34%, white 10%) !important;
+    box-shadow:
+        inset 0 1px 0 color-mix(in srgb, white 14%, transparent),
+        var(--glow-primary) !important;
+}

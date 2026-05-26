@@ -1,0 +1,123 @@
+/* =========================================================
+   BASE OFFCANVAS
+   Modern product UI drawers
+   ========================================================= */
+
+.offcanvas {
+    color: var(--color-text-primary) !important;
+    background: var(--color-bg-secondary) !important;
+    border-color: var(--color-border-primary) !important;
+    box-shadow: var(--shadow-md) !important;
+}
+
+.offcanvas-backdrop {
+    background-color: color-mix(in srgb, black 72%, var(--color-bg-primary) 28%) !important;
+}
+
+.offcanvas-backdrop.show {
+    opacity: 0.58 !important;
+}
+
+.offcanvas-header {
+    align-items: flex-start !important;
+    gap: var(--padding-lg) !important;
+    padding: var(--padding-xl) !important;
+    border-bottom: 1px solid var(--color-border-primary) !important;
+}
+
+.offcanvas-title {
+    margin: 0 !important;
+    color: var(--color-text-primary) !important;
+    font-size: var(--font-lg) !important;
+    font-weight: 850 !important;
+    letter-spacing: -0.02em !important;
+}
+
+.offcanvas-subtitle {
+    margin: var(--padding-xs) 0 0 !important;
+    color: var(--color-text-muted) !important;
+    font-size: var(--font-sm) !important;
+}
+
+.offcanvas-body {
+    padding: var(--padding-xl) !important;
+    color: var(--color-text-secondary) !important;
+}
+
+.offcanvas-body p {
+    color: var(--color-text-secondary) !important;
+}
+
+.offcanvas .btn-close {
+    border-radius: var(--radius-round) !important;
+    opacity: 0.65 !important;
+}
+
+.offcanvas .btn-close:hover {
+    opacity: 1 !important;
+    background-color: var(--color-bg-variant) !important;
+}
+
+.offcanvas-start {
+    border-right: 1px solid var(--color-border-primary) !important;
+}
+
+.offcanvas-end {
+    border-left: 1px solid var(--color-border-primary) !important;
+}
+
+.offcanvas-top {
+    border-bottom: 1px solid var(--color-border-primary) !important;
+}
+
+.offcanvas-bottom {
+    border-top: 1px solid var(--color-border-primary) !important;
+}
+
+.offcanvas-menu {
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-xs);
+    margin-top: var(--padding-lg);
+}
+
+.offcanvas-menu a {
+    padding: var(--padding-sm) var(--padding-md);
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    border-radius: var(--radius-sm);
+    font-size: var(--font-sm);
+    font-weight: 750;
+}
+
+.offcanvas-menu a:hover,
+.offcanvas-menu a:focus {
+    color: var(--color-text-primary);
+    background: var(--color-bg-variant);
+}
+
+.offcanvas-menu a.active {
+    color: var(--color-text-on-primary);
+    background: var(--color-primary);
+}
+
+.offcanvas-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-xs);
+    margin-bottom: var(--padding-md);
+    padding: var(--padding-lg);
+    background: var(--color-bg-variant);
+    border: 1px solid var(--color-border-primary);
+    border-radius: var(--radius-md);
+}
+
+.offcanvas-card strong {
+    color: var(--color-text-primary);
+    font-weight: 850;
+}
+
+.offcanvas-card span {
+    color: var(--color-text-secondary);
+    font-size: var(--font-sm);
+}

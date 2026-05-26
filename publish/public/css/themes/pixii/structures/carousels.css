@@ -1,0 +1,175 @@
+/* =========================================================
+   PIXII CAROUSEL
+   Magical storybook carousel overrides
+   ========================================================= */
+
+.carousel {
+    position: relative !important;
+    isolation: isolate !important;
+
+    background:
+        radial-gradient(
+            circle at 92% 92%,
+            color-mix(in srgb, var(--color-primary) 12%, transparent) 0%,
+            transparent 32%
+        ),
+        var(--color-bg-secondary) !important;
+
+    box-shadow:
+        inset 0 1px 0 color-mix(in srgb, white 34%, transparent),
+        var(--shadow-md) !important;
+}
+
+.carousel::before {
+    content: "✿";
+    position: absolute;
+    right: -0.75rem;
+    bottom: -1rem;
+    z-index: 1;
+
+    color: color-mix(in srgb, var(--color-primary) 18%, transparent);
+    font-size: 5rem;
+    line-height: 1;
+
+    opacity: 0.42;
+    transform: rotate(-18deg);
+    pointer-events: none;
+}
+
+.carousel::after {
+    content: "✧";
+    position: absolute;
+    top: var(--padding-lg);
+    right: var(--padding-xl);
+    z-index: 2;
+
+    color: color-mix(in srgb, white 70%, transparent);
+    font-size: 1.1rem;
+
+    opacity: 0.85;
+    pointer-events: none;
+}
+
+.carousel-preview-surface {
+    background:
+        radial-gradient(
+            circle at 18% 14%,
+            color-mix(in srgb, white 32%, transparent) 0%,
+            transparent 28%
+        ),
+        linear-gradient(
+            135deg,
+            var(--color-accent) 0%,
+            var(--color-bg-variant) 100%
+        );
+}
+
+.carousel-eyebrow {
+    color: var(--color-primary-70);
+}
+
+.carousel-preview-content p {
+    line-height: 1.65;
+}
+
+.primary-slide {
+    background:
+        radial-gradient(
+            circle at 88% 20%,
+            color-mix(in srgb, var(--color-primary) 28%, transparent) 0%,
+            transparent 36%
+        ),
+        radial-gradient(
+            circle at 18% 14%,
+            color-mix(in srgb, white 34%, transparent) 0%,
+            transparent 28%
+        ),
+        linear-gradient(
+            135deg,
+            var(--color-accent) 0%,
+            var(--color-bg-variant) 100%
+        );
+}
+
+.secondary-slide {
+    background:
+        radial-gradient(
+            circle at 88% 20%,
+            color-mix(in srgb, var(--color-secondary) 30%, transparent) 0%,
+            transparent 36%
+        ),
+        linear-gradient(
+            135deg,
+            var(--color-bg-secondary) 0%,
+            var(--color-accent) 100%
+        );
+}
+
+.accent-slide {
+    background:
+        radial-gradient(
+            circle at 86% 18%,
+            color-mix(in srgb, var(--color-primary) 24%, transparent) 0%,
+            transparent 36%
+        ),
+        linear-gradient(
+            135deg,
+            var(--color-bg-variant) 0%,
+            var(--color-accent) 100%
+        );
+}
+
+.note-slide {
+    background:
+        radial-gradient(
+            circle at 88% 18%,
+            color-mix(in srgb, var(--color-note) 42%, transparent) 0%,
+            transparent 38%
+        ),
+        var(--color-bg-secondary);
+}
+
+.success-slide {
+    background:
+        radial-gradient(
+            circle at 88% 18%,
+            color-mix(in srgb, var(--color-success) 42%, transparent) 0%,
+            transparent 38%
+        ),
+        var(--color-bg-secondary);
+}
+
+.carousel-caption {
+    background:
+        radial-gradient(
+            circle at 90% 90%,
+            color-mix(in srgb, var(--color-primary) 10%, transparent) 0%,
+            transparent 32%
+        ),
+        color-mix(in srgb, var(--color-bg-secondary) 88%, transparent) !important;
+
+    border-radius: var(--radius-lg) !important;
+
+    box-shadow:
+        inset 0 1px 0 color-mix(in srgb, white 30%, transparent),
+        var(--shadow-sm) !important;
+}
+
+.carousel-indicators [data-bs-target] {
+    opacity: 0.45 !important;
+}
+
+.carousel-indicators .active {
+    width: 1.75rem !important;
+    background: var(--gradient-primary) !important;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 2.4rem !important;
+    height: 2.4rem !important;
+
+    background-color: color-mix(in srgb, var(--color-bg-secondary) 78%, transparent) !important;
+
+    border: 1px solid var(--color-border-primary) !important;
+}

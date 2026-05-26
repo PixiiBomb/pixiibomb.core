@@ -1,0 +1,458 @@
+:root {
+    /* =========================================================
+       COLORS
+       Missing-palette fallback values
+       These colors should be overridden by a loaded palette.
+       If you see these colors in the app, a palette did not load.
+       ========================================================= */
+
+    /* Backgrounds */
+    --color-bg-primary: #ff0033;
+    --color-bg-secondary: #ffea00;
+    --color-bg-variant: #00e5ff;
+
+    --color-bg: var(--color-bg-primary);
+
+    /* Text */
+    --color-text-primary: #00ff66;
+    --color-text-secondary: #ffffff;
+    --color-text-accent: #ffea00;
+    --color-text-variant: #00e5ff;
+    --color-text-muted: #ff66cc;
+
+    --color-text-on-primary: #ffffff;
+    --color-text-on-secondary: #000000;
+    --color-text-on-accent: #000000;
+    --color-text-on-variant: #000000;
+    --color-text-on-success: #000000;
+    --color-text-on-danger: #ffffff;
+    --color-text-on-caution: #000000;
+    --color-text-on-note: #000000;
+    --color-text-on-light: #000000;
+    --color-text-on-dark: #ffffff;
+
+    /* Borders */
+    --color-border-primary: #00ff66;
+    --color-border-secondary: #ffea00;
+    --color-border-accent: #00e5ff;
+    --color-border-variant: #ff66cc;
+
+    /* =========================================================
+       INTERACTIVE / SEMANTIC
+       Palette seed colors
+       ========================================================= */
+
+    --color-primary: #ff0033;
+    --color-primary-0: color-mix(in srgb, white 100%, var(--color-primary) 0%);
+    --color-primary-10: color-mix(in srgb, white 80%, var(--color-primary) 20%);
+    --color-primary-20: color-mix(in srgb, white 60%, var(--color-primary) 40%);
+    --color-primary-30: color-mix(in srgb, white 40%, var(--color-primary) 60%);
+    --color-primary-40: color-mix(in srgb, white 20%, var(--color-primary) 80%);
+    --color-primary-50: var(--color-primary);
+    --color-primary-60: color-mix(in srgb, black 20%, var(--color-primary) 80%);
+    --color-primary-70: color-mix(in srgb, black 40%, var(--color-primary) 60%);
+    --color-primary-80: color-mix(in srgb, black 60%, var(--color-primary) 40%);
+    --color-primary-90: color-mix(in srgb, black 80%, var(--color-primary) 20%);
+    --color-primary-100: color-mix(in srgb, black 100%, var(--color-primary) 0%);
+    --color-primary-soft: var(--color-primary-10);
+    --color-primary-hover: var(--color-primary-60);
+    --color-primary-active: var(--color-primary-70);
+    --color-primary-inactive: color-mix(in srgb, var(--color-primary) 40%, gray 60%);
+
+    --color-secondary: #ffea00;
+    --color-secondary-0: color-mix(in srgb, white 100%, var(--color-secondary) 0%);
+    --color-secondary-10: color-mix(in srgb, white 80%, var(--color-secondary) 20%);
+    --color-secondary-20: color-mix(in srgb, white 60%, var(--color-secondary) 40%);
+    --color-secondary-30: color-mix(in srgb, white 40%, var(--color-secondary) 60%);
+    --color-secondary-40: color-mix(in srgb, white 20%, var(--color-secondary) 80%);
+    --color-secondary-50: var(--color-secondary);
+    --color-secondary-60: color-mix(in srgb, black 20%, var(--color-secondary) 80%);
+    --color-secondary-70: color-mix(in srgb, black 40%, var(--color-secondary) 60%);
+    --color-secondary-80: color-mix(in srgb, black 60%, var(--color-secondary) 40%);
+    --color-secondary-90: color-mix(in srgb, black 80%, var(--color-secondary) 20%);
+    --color-secondary-100: color-mix(in srgb, black 100%, var(--color-secondary) 0%);
+    --color-secondary-soft: var(--color-secondary-10);
+    --color-secondary-hover: var(--color-secondary-60);
+    --color-secondary-active: var(--color-secondary-70);
+    --color-secondary-inactive: color-mix(in srgb, var(--color-secondary) 40%, gray 60%);
+
+    --color-accent: #00e5ff;
+    --color-accent-0: color-mix(in srgb, white 100%, var(--color-accent) 0%);
+    --color-accent-10: color-mix(in srgb, white 80%, var(--color-accent) 20%);
+    --color-accent-20: color-mix(in srgb, white 60%, var(--color-accent) 40%);
+    --color-accent-30: color-mix(in srgb, white 40%, var(--color-accent) 60%);
+    --color-accent-40: color-mix(in srgb, white 20%, var(--color-accent) 80%);
+    --color-accent-50: var(--color-accent);
+    --color-accent-60: color-mix(in srgb, black 20%, var(--color-accent) 80%);
+    --color-accent-70: color-mix(in srgb, black 40%, var(--color-accent) 60%);
+    --color-accent-80: color-mix(in srgb, black 60%, var(--color-accent) 40%);
+    --color-accent-90: color-mix(in srgb, black 80%, var(--color-accent) 20%);
+    --color-accent-100: color-mix(in srgb, black 100%, var(--color-accent) 0%);
+    --color-accent-soft: var(--color-accent-10);
+    --color-accent-hover: var(--color-accent-60);
+    --color-accent-active: var(--color-accent-70);
+    --color-accent-inactive: color-mix(in srgb, var(--color-accent) 40%, gray 60%);
+
+    --color-variant: #ff66cc;
+    --color-variant-0: color-mix(in srgb, white 100%, var(--color-variant) 0%);
+    --color-variant-10: color-mix(in srgb, white 80%, var(--color-variant) 20%);
+    --color-variant-20: color-mix(in srgb, white 60%, var(--color-variant) 40%);
+    --color-variant-30: color-mix(in srgb, white 40%, var(--color-variant) 60%);
+    --color-variant-40: color-mix(in srgb, white 20%, var(--color-variant) 80%);
+    --color-variant-50: var(--color-variant);
+    --color-variant-60: color-mix(in srgb, black 20%, var(--color-variant) 80%);
+    --color-variant-70: color-mix(in srgb, black 40%, var(--color-variant) 60%);
+    --color-variant-80: color-mix(in srgb, black 60%, var(--color-variant) 40%);
+    --color-variant-90: color-mix(in srgb, black 80%, var(--color-variant) 20%);
+    --color-variant-100: color-mix(in srgb, black 100%, var(--color-variant) 0%);
+    --color-variant-soft: var(--color-variant-10);
+    --color-variant-hover: var(--color-variant-60);
+    --color-variant-active: var(--color-variant-70);
+    --color-variant-inactive: color-mix(in srgb, var(--color-variant) 40%, gray 60%);
+
+    --color-success: #00ff66;
+    --color-success-0: color-mix(in srgb, white 100%, var(--color-success) 0%);
+    --color-success-10: color-mix(in srgb, white 80%, var(--color-success) 20%);
+    --color-success-20: color-mix(in srgb, white 60%, var(--color-success) 40%);
+    --color-success-30: color-mix(in srgb, white 40%, var(--color-success) 60%);
+    --color-success-40: color-mix(in srgb, white 20%, var(--color-success) 80%);
+    --color-success-50: var(--color-success);
+    --color-success-60: color-mix(in srgb, black 20%, var(--color-success) 80%);
+    --color-success-70: color-mix(in srgb, black 40%, var(--color-success) 60%);
+    --color-success-80: color-mix(in srgb, black 60%, var(--color-success) 40%);
+    --color-success-90: color-mix(in srgb, black 80%, var(--color-success) 20%);
+    --color-success-100: color-mix(in srgb, black 100%, var(--color-success) 0%);
+    --color-success-soft: var(--color-success-10);
+    --color-success-hover: var(--color-success-60);
+    --color-success-active: var(--color-success-70);
+    --color-success-inactive: color-mix(in srgb, var(--color-success) 40%, gray 60%);
+
+    --color-danger: #ff0033;
+    --color-danger-0: color-mix(in srgb, white 100%, var(--color-danger) 0%);
+    --color-danger-10: color-mix(in srgb, white 80%, var(--color-danger) 20%);
+    --color-danger-20: color-mix(in srgb, white 60%, var(--color-danger) 40%);
+    --color-danger-30: color-mix(in srgb, white 40%, var(--color-danger) 60%);
+    --color-danger-40: color-mix(in srgb, white 20%, var(--color-danger) 80%);
+    --color-danger-50: var(--color-danger);
+    --color-danger-60: color-mix(in srgb, black 20%, var(--color-danger) 80%);
+    --color-danger-70: color-mix(in srgb, black 40%, var(--color-danger) 60%);
+    --color-danger-80: color-mix(in srgb, black 60%, var(--color-danger) 40%);
+    --color-danger-90: color-mix(in srgb, black 80%, var(--color-danger) 20%);
+    --color-danger-100: color-mix(in srgb, black 100%, var(--color-danger) 0%);
+    --color-danger-soft: var(--color-danger-10);
+    --color-danger-hover: var(--color-danger-60);
+    --color-danger-active: var(--color-danger-70);
+    --color-danger-inactive: color-mix(in srgb, var(--color-danger) 40%, gray 60%);
+
+    --color-caution: #ffea00;
+    --color-caution-0: color-mix(in srgb, white 100%, var(--color-caution) 0%);
+    --color-caution-10: color-mix(in srgb, white 80%, var(--color-caution) 20%);
+    --color-caution-20: color-mix(in srgb, white 60%, var(--color-caution) 40%);
+    --color-caution-30: color-mix(in srgb, white 40%, var(--color-caution) 60%);
+    --color-caution-40: color-mix(in srgb, white 20%, var(--color-caution) 80%);
+    --color-caution-50: var(--color-caution);
+    --color-caution-60: color-mix(in srgb, black 20%, var(--color-caution) 80%);
+    --color-caution-70: color-mix(in srgb, black 40%, var(--color-caution) 60%);
+    --color-caution-80: color-mix(in srgb, black 60%, var(--color-caution) 40%);
+    --color-caution-90: color-mix(in srgb, black 80%, var(--color-caution) 20%);
+    --color-caution-100: color-mix(in srgb, black 100%, var(--color-caution) 0%);
+    --color-caution-soft: var(--color-caution-10);
+    --color-caution-hover: var(--color-caution-60);
+    --color-caution-active: var(--color-caution-70);
+    --color-caution-inactive: color-mix(in srgb, var(--color-caution) 40%, gray 60%);
+
+    --color-note: #00e5ff;
+    --color-note-0: color-mix(in srgb, white 100%, var(--color-note) 0%);
+    --color-note-10: color-mix(in srgb, white 80%, var(--color-note) 20%);
+    --color-note-20: color-mix(in srgb, white 60%, var(--color-note) 40%);
+    --color-note-30: color-mix(in srgb, white 40%, var(--color-note) 60%);
+    --color-note-40: color-mix(in srgb, white 20%, var(--color-note) 80%);
+    --color-note-50: var(--color-note);
+    --color-note-60: color-mix(in srgb, black 20%, var(--color-note) 80%);
+    --color-note-70: color-mix(in srgb, black 40%, var(--color-note) 60%);
+    --color-note-80: color-mix(in srgb, black 60%, var(--color-note) 40%);
+    --color-note-90: color-mix(in srgb, black 80%, var(--color-note) 20%);
+    --color-note-100: color-mix(in srgb, black 100%, var(--color-note) 0%);
+    --color-note-soft: var(--color-note-10);
+    --color-note-hover: var(--color-note-60);
+    --color-note-active: var(--color-note-70);
+    --color-note-inactive: color-mix(in srgb, var(--color-note) 40%, gray 60%);
+
+    /* =========================================================
+       EFFECTS
+       ========================================================= */
+
+    --shadow-sm: 0 10px 20px color-mix(in srgb, var(--color-primary) 28%, transparent);
+    --shadow-md: 0 16px 40px color-mix(in srgb, var(--color-primary) 22%, transparent);
+
+    --blur-sm: 10px;
+    --blur-md: 12px;
+
+    /* Overlay surfaces */
+    --surface-glass: color-mix(in srgb, var(--color-bg-secondary) 88%, transparent);
+    --surface-glass-soft: color-mix(in srgb, var(--color-bg-secondary) 78%, transparent);
+    --surface-glass-strong: color-mix(in srgb, var(--color-bg-secondary) 94%, transparent);
+
+    --border-glass: color-mix(in srgb, var(--color-border-primary) 85%, transparent);
+
+    /* =========================================================
+       SEMANTIC GRADIENTS
+       ========================================================= */
+
+    --gradient-primary:
+        linear-gradient(
+            180deg,
+            var(--color-primary-40) 0%,
+            var(--color-primary-50) 100%
+        );
+
+    --gradient-primary-hover:
+        linear-gradient(
+            180deg,
+            var(--color-primary-50) 0%,
+            var(--color-primary-60) 100%
+        );
+
+    --gradient-primary-active:
+        linear-gradient(
+            180deg,
+            var(--color-primary-60) 0%,
+            var(--color-primary-70) 100%
+        );
+
+    --gradient-secondary:
+        linear-gradient(
+            180deg,
+            var(--color-secondary-40) 0%,
+            var(--color-secondary-50) 100%
+        );
+
+    --gradient-secondary-hover:
+        linear-gradient(
+            180deg,
+            var(--color-secondary-50) 0%,
+            var(--color-secondary-60) 100%
+        );
+
+    --gradient-secondary-active:
+        linear-gradient(
+            180deg,
+            var(--color-secondary-60) 0%,
+            var(--color-secondary-70) 100%
+        );
+
+    --gradient-accent:
+        linear-gradient(
+            180deg,
+            var(--color-accent-40) 0%,
+            var(--color-accent-50) 100%
+        );
+
+    --gradient-accent-hover:
+        linear-gradient(
+            180deg,
+            var(--color-accent-50) 0%,
+            var(--color-accent-60) 100%
+        );
+
+    --gradient-accent-active:
+        linear-gradient(
+            180deg,
+            var(--color-accent-60) 0%,
+            var(--color-accent-70) 100%
+        );
+
+    --gradient-variant:
+        linear-gradient(
+            180deg,
+            var(--color-bg-secondary) 0%,
+            var(--color-variant-50) 100%
+        );
+
+    --gradient-variant-hover:
+        linear-gradient(
+            180deg,
+            var(--color-variant-20) 0%,
+            var(--color-variant-60) 100%
+        );
+
+    --gradient-variant-active:
+        linear-gradient(
+            180deg,
+            var(--color-variant-40) 0%,
+            var(--color-variant-70) 100%
+        );
+
+    --gradient-success:
+        linear-gradient(
+            180deg,
+            var(--color-success-40) 0%,
+            var(--color-success-50) 100%
+        );
+
+    --gradient-success-hover:
+        linear-gradient(
+            180deg,
+            var(--color-success-50) 0%,
+            var(--color-success-60) 100%
+        );
+
+    --gradient-success-active:
+        linear-gradient(
+            180deg,
+            var(--color-success-60) 0%,
+            var(--color-success-70) 100%
+        );
+
+    --gradient-danger:
+        linear-gradient(
+            180deg,
+            var(--color-danger-40) 0%,
+            var(--color-danger-50) 100%
+        );
+
+    --gradient-danger-hover:
+        linear-gradient(
+            180deg,
+            var(--color-danger-50) 0%,
+            var(--color-danger-60) 100%
+        );
+
+    --gradient-danger-active:
+        linear-gradient(
+            180deg,
+            var(--color-danger-60) 0%,
+            var(--color-danger-70) 100%
+        );
+
+    --gradient-caution:
+        linear-gradient(
+            180deg,
+            var(--color-caution-40) 0%,
+            var(--color-caution-50) 100%
+        );
+
+    --gradient-caution-hover:
+        linear-gradient(
+            180deg,
+            var(--color-caution-50) 0%,
+            var(--color-caution-60) 100%
+        );
+
+    --gradient-caution-active:
+        linear-gradient(
+            180deg,
+            var(--color-caution-60) 0%,
+            var(--color-caution-70) 100%
+        );
+
+    --gradient-note:
+        linear-gradient(
+            180deg,
+            var(--color-note-40) 0%,
+            var(--color-note-50) 100%
+        );
+
+    --gradient-note-hover:
+        linear-gradient(
+            180deg,
+            var(--color-note-50) 0%,
+            var(--color-note-60) 100%
+        );
+
+    --gradient-note-active:
+        linear-gradient(
+            180deg,
+            var(--color-note-60) 0%,
+            var(--color-note-70) 100%
+        );
+
+    /* =========================================================
+       SPACING
+       Used for padding, margin, gap, etc.
+       Medium is the default/base shortcut
+       ========================================================= */
+
+    --padding-xs: clamp(0.125rem, 0.1rem + 0.2vw, 0.25rem);
+    --padding-sm: clamp(0.25rem, 0.2rem + 0.3vw, 0.5rem);
+    --padding-md: clamp(0.5rem, 0.4rem + 0.4vw, 0.75rem);
+    --padding-lg: clamp(0.75rem, 0.6rem + 0.6vw, 1rem);
+    --padding-xl: clamp(1rem, 0.8rem + 1vw, 2rem);
+
+    --padding: var(--padding-md);
+
+    /* =========================================================
+       BORDER SIZES
+       Thickness only
+       ========================================================= */
+
+    --border-xs: clamp(1px, 0.05rem + 0.05vw, 1px);
+    --border-sm: clamp(1px, 0.05rem + 0.08vw, 2px);
+    --border-md: clamp(2px, 0.08rem + 0.12vw, 3px);
+    --border-lg: clamp(2px, 0.1rem + 0.18vw, 4px);
+    --border-xl: clamp(3px, 0.12rem + 0.24vw, 6px);
+
+    --border: var(--border-md);
+
+    /* =========================================================
+       FONT SIZES
+       xs never smaller than 12px
+       ========================================================= */
+
+    --font-xs: clamp(0.75rem, 0.72rem + 0.1vw, 0.8125rem);
+    --font-sm: clamp(0.875rem, 0.83rem + 0.15vw, 0.95rem);
+    --font-md: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
+    --font-lg: clamp(1.125rem, 1.05rem + 0.35vw, 1.375rem);
+    --font-xl: clamp(1.25rem, 1.1rem + 0.8vw, 2rem);
+
+    --font: var(--font-md);
+
+    /* =========================================================
+       ICON SIZES
+       Kept on pixel-art / 8-bit friendly scale
+       ========================================================= */
+
+    --icon-xs: clamp(8px, 0.45rem + 0.2vw, 12px);
+    --icon-sm: clamp(16px, 0.9rem + 0.25vw, 20px);
+    --icon-md: clamp(24px, 1.35rem + 0.4vw, 32px);
+    --icon-lg: clamp(32px, 1.8rem + 0.6vw, 40px);
+    --icon-xl: clamp(128px, 2.5rem + 1vw, 128px);
+    --icon-xxl: clamp(256px, 3rem + 1.5vw, 256px);
+
+    --icon: var(--icon-md);
+
+    /* =========================================================
+       SHAPE
+       ========================================================= */
+
+    --radius-xs: 2px;
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 24px;
+    --radius-xl: 30px;
+    --radius-round: 999px;
+
+    --radius: var(--radius-md);
+
+    /* =========================================================
+       MOTION
+       ========================================================= */
+
+    --time-fast: 0.18s ease;
+    --time: all 0.3s ease-in-out;
+
+    --transition-hover:
+        transform 0.18s ease,
+        box-shadow 0.18s ease,
+        border-color 0.18s ease;
+
+    --transition-color:
+        color 0.18s ease,
+        background 0.18s ease,
+        border-color 0.18s ease;
+}
+
+body {
+    background-color: var(--color-bg-primary)!important;
+    color: var(--color-text-primary)!important;
+}

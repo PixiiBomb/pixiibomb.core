@@ -1,0 +1,158 @@
+/* =========================================================
+   BASE PAGINATION
+   Modern product UI pagination
+   ========================================================= */
+
+.pagination {
+    gap: var(--padding-xs);
+    margin: 0 !important;
+}
+
+.page-link {
+    min-width: 2.35rem;
+    min-height: 2.35rem;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+
+    padding: var(--padding-sm) var(--padding-md) !important;
+
+    color: var(--color-text-secondary) !important;
+    background: var(--color-bg-secondary) !important;
+
+    border: 1px solid var(--color-border-primary) !important;
+    border-radius: var(--radius-sm) !important;
+
+    font-size: var(--font-sm) !important;
+    font-weight: 750 !important;
+    line-height: 1 !important;
+
+    box-shadow: none !important;
+
+    transition:
+        color 0.14s ease,
+        background 0.14s ease,
+        border-color 0.14s ease,
+        transform 0.14s ease,
+        box-shadow 0.14s ease !important;
+}
+
+.page-link:hover,
+.page-link:focus {
+    color: var(--color-text-primary) !important;
+    background: var(--color-bg-variant) !important;
+    border-color: var(--color-border-secondary) !important;
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-sm) !important;
+}
+
+.page-link:focus {
+    box-shadow:
+        var(--shadow-sm),
+        0 0 0 3px color-mix(in srgb, var(--color-primary) 22%, transparent) !important;
+}
+
+.page-item.active .page-link {
+    color: var(--color-text-on-primary) !important;
+    background: var(--color-primary) !important;
+    border-color: var(--color-primary-60) !important;
+    box-shadow: var(--shadow-sm) !important;
+}
+
+.page-item.disabled .page-link,
+.page-link.disabled {
+    color: var(--color-text-muted) !important;
+    background: var(--color-bg-variant) !important;
+    border-color: var(--color-border-primary) !important;
+    opacity: 0.58 !important;
+    pointer-events: none !important;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+.pagination-lg .page-link {
+    min-width: 2.9rem;
+    min-height: 2.9rem;
+    padding: var(--padding-md) var(--padding-lg) !important;
+    font-size: var(--font-md) !important;
+    border-radius: var(--radius-md) !important;
+}
+
+.pagination-sm .page-link {
+    min-width: 2rem;
+    min-height: 2rem;
+    padding: var(--padding-xs) var(--padding-sm) !important;
+    font-size: var(--font-xs) !important;
+    border-radius: var(--radius-xs) !important;
+}
+
+.pagination-icons .page-link {
+    font-size: var(--font-lg) !important;
+    font-weight: 850 !important;
+}
+
+/* =========================================================
+   TAILWIND-INSPIRED PAGINATION
+   ========================================================= */
+
+.tailwind-pagination {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--padding-md);
+
+    padding: var(--padding-sm);
+
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border-primary);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+}
+
+.tailwind-page-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--padding-xs);
+}
+
+.tailwind-pagination a,
+.tailwind-pagination span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 2.2rem;
+    min-height: 2.2rem;
+    padding: var(--padding-xs) var(--padding-sm);
+
+    color: var(--color-text-secondary);
+    text-decoration: none;
+
+    border-radius: var(--radius-sm);
+
+    font-size: var(--font-sm);
+    font-weight: 750;
+}
+
+.tailwind-pagination a:hover {
+    color: var(--color-text-primary);
+    background: var(--color-bg-variant);
+}
+
+.tailwind-pagination a.active {
+    color: var(--color-text-on-primary);
+    background: var(--color-primary);
+}
+
+.tailwind-page-control {
+    min-width: auto !important;
+    padding-inline: var(--padding-md) !important;
+}
+
+.tailwind-page-control.disabled {
+    color: var(--color-text-muted);
+    opacity: 0.55;
+    pointer-events: none;
+}

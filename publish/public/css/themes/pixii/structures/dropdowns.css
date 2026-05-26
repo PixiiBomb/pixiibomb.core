@@ -1,0 +1,83 @@
+/* =========================================================
+   PIXII DROPDOWNS
+   Magical storybook dropdown overrides
+   ========================================================= */
+
+.dropdown-menu {
+    min-width: 15rem !important;
+
+    background:
+        radial-gradient(
+            circle at 94% 90%,
+            color-mix(in srgb, var(--color-primary) 13%, transparent) 0%,
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 8% 10%,
+            color-mix(in srgb, white 16%, transparent) 0%,
+            transparent 28%
+        ),
+        var(--color-bg-secondary) !important;
+
+    border-radius: var(--radius) !important;
+
+    box-shadow:
+        inset 0 1px 0 color-mix(in srgb, white 34%, transparent),
+        var(--shadow-md) !important;
+}
+
+.dropdown-menu::before {
+    content: "✿";
+    position: absolute;
+    right: -0.55rem;
+    bottom: -0.8rem;
+    z-index: -1;
+
+    color: color-mix(in srgb, var(--color-primary) 18%, transparent);
+    font-size: var(--font-lg);
+    line-height: 1;
+
+    opacity: 0.45;
+    transform: rotate(-18deg);
+    pointer-events: none;
+}
+
+.dropdown-item {
+    padding: var(--padding-sm) !important;
+    font-weight: 700 !important;
+    border-radius: var(--radius) !important;
+    transition: all .3s ease-in-out !important;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+    background:
+        radial-gradient(
+            circle at 92% 88%,
+            color-mix(in srgb, var(--color-primary) 14%, transparent) 0%,
+            transparent 30%
+        ),
+        var(--color-accent) !important;
+
+    transform: translateX(2px);
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+    background: var(--gradient-primary) !important;
+}
+
+.dropdown-item.active::after,
+.dropdown-item:active::after {
+    content: "✧";
+    position: absolute;
+    right: var(--padding-md);
+
+    color: color-mix(in srgb, white 72%, transparent);
+}
+
+.dropdown-avatar {
+    background: var(--gradient-primary);
+    border: 1px solid var(--color-primary-60);
+    box-shadow: var(--shadow-sm);
+}
