@@ -1,6 +1,6 @@
 {
-    "name": "@pixiibomb/pixiibomb.core",
-    "version": "1.0.0",
+    "name": "@pixiibomb/core",
+    "version": "1.0.2",
     "description": "A standard package for all PixiiBomb projects",
     "main": "index.js",
     "scripts": {
