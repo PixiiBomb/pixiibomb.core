@@ -43,12 +43,11 @@ class DashboardController extends PageController
         $file = $data['avatar'];
 
         $filename = Str::uuid() . '.' . $file->getClientOriginalExtension();
-        $relativePath = "images/avatars/{$filename}";
 
         $file->move(public_path('images/avatars'), $filename);
 
         $request->user()->update([
-            'avatar' => $relativePath,
+            'avatar' => $filename,
         ]);
 
         return redirect()

@@ -305,6 +305,7 @@ class PixiiInstallCommand extends Command
         return [
             '@popperjs/core' => '^2.11.8',
             'bootstrap' => '^5.3.8',
+            'bootstrap-icons' => '^1.13.1',
         ];
     }
 
