@@ -12,10 +12,9 @@ class Button extends ComponentBlock
 
     public function __construct(string $text)
     {
+        parent::__construct();
         $this->setText($text);
         $this->setAttribute('type', 'button');
-
-        parent::__construct();
     }
 
     protected static function getStyleEnum(): string

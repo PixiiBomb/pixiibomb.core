@@ -16,10 +16,10 @@ class ComponentPreview extends ComponentBlock
 
     public function __construct(array $sections = [], string $title = self::DEFAULT_TITLE, string $description = self::DEFAULT_DESCRIPTION)
     {
+        parent::__construct();
         $this->setTitle($title);
         $this->setDescription($description);
         $this->setSections($sections);
-        parent::__construct();
     }
 
     protected static function getStyleEnum(): string

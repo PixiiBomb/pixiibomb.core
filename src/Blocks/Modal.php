@@ -19,8 +19,8 @@ class Modal extends ComponentBlock
 
     public function __construct()
     {
-        $this->setButtonOpen($this->getDefaultButtonOpen());
         parent::__construct();
+        $this->setButtonOpen($this->getDefaultButtonOpen());
     }
 
     protected static function getStyleEnum(): string

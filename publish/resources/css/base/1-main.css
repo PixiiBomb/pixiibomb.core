@@ -1,6 +1,6 @@
 /* =========================================================
-   PIXII MAIN
-   Magical storybook global styling
+   BASE MAIN
+   General reset
    ========================================================= */
 
 html {
@@ -29,10 +29,6 @@ body {
         );
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
-}
-
-main {
-    position: relative;
 }
 
 ::selection {
@@ -78,44 +74,6 @@ hr {
 
     opacity: 1;
 }
-
-/*h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    margin-top: 0;
-    margin-bottom: var(--padding-md);
-    color: var(--color-text-primary);
-    font-weight: 900;
-    line-height: 1.08;
-    letter-spacing: -0.035em;
-}
-
-h1 {
-    font-size: clamp(2.4rem, 4vw, 3.8rem);
-}
-
-h2 {
-    font-size: clamp(1.95rem, 3vw, 2.9rem);
-}
-
-h3 {
-    font-size: clamp(1.55rem, 2vw, 2.15rem);
-}
-
-h4 {
-    font-size: 1.28rem;
-}
-
-h5 {
-    font-size: 1.08rem;
-}
-
-h6 {
-    font-size: 0.92rem;
-} */
 
 ul,
 ol {
