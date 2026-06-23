@@ -3,11 +3,15 @@
    Magical storybook navbar overrides
    ========================================================= */
 
+/* =========================================================
+   PIXII NAVBAR
+   Magical storybook navbar overrides
+   ========================================================= */
+
 .navbar {
     position: relative !important;
     isolation: isolate !important;
     overflow: visible !important;
-
     background:
         radial-gradient(
             circle at 96% 90%,
@@ -15,39 +19,14 @@
             transparent 32%
         ),
         color-mix(in srgb, var(--color-bg-secondary) 92%, transparent) !important;
-
-    border-radius: var(--radius-lg) !important;
-
     box-shadow:
-        inset 0 1px 0 color-mix(in srgb, white 34%, transparent),
+        inset 0 1px 0 color-mix(in srgb, var(--color-primary) 34%, transparent),
         var(--shadow-sm) !important;
-}
-
-.navbar::before {
-    content: "✿";
-    position: absolute;
-    right: -0.5rem;
-    bottom: -0.9rem;
-    z-index: -1;
-
-    color: color-mix(in srgb, var(--color-primary) 16%, transparent);
-    font-size: 4rem;
-    line-height: 1;
-
-    opacity: 0.38;
-    transform: rotate(-18deg);
-    pointer-events: none;
 }
 
 .navbar-brand {
     font-weight: 900 !important;
     letter-spacing: -0.015em !important;
-}
-
-.navbar-brand::after {
-    content: " ✧";
-    color: var(--color-primary);
-    font-size: 0.9em;
 }
 
 .navbar .nav-link {

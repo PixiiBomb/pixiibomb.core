@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
+use PixiiBomb\Core\Controllers\ChatbotController;
 use PixiiBomb\Core\Controllers\ThemeController;
 use PixiiBomb\Core\Controllers\User\{LogoutController, RegisterController};
 use PixiiBomb\Core\Controllers\User\DashboardController;
@@ -29,3 +30,5 @@ Route::prefix('theme')->group(function () {
         ->middleware('auth')
         ->name('themes.settings');
 });
+
+Route::get('/chatbot', [ChatbotController::class, 'index'])->middleware('auth')->name('chatbot');

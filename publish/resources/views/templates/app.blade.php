@@ -59,7 +59,7 @@
 
 <body id="{{ $id }}">
 
-<main id="{{ $page->formatLayoutId() }}">
+<main class="min-vh-100 d-flex flex-column" id="{{ $page->formatLayoutId() }}">
     @yield('layout')
 </main>
 

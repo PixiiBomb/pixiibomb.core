@@ -3,7 +3,7 @@
 namespace PixiiBomb\Core\Controllers\Api;
 
 use PixiiBomb\Core\Models\Theme;
-use PixiiBomb\Core\Schemas\ThemeSchema;
+use PixiiBomb\Core\Validation\ThemeValidation;
 
 class ThemeController extends ApiController
 {
@@ -12,8 +12,8 @@ class ThemeController extends ApiController
         return Theme::class;
     }
 
-    protected function schema(): string
+    protected function validator(): string
     {
-        return ThemeSchema::class;
+        return ThemeValidation::class;
     }
 }

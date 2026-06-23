@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg app-navbar">
+<nav class="navbar navbar-expand-lg navbar-flush app-navbar">
     <div class="container">
 
         <a class="navbar-brand app-brand" href="/">
@@ -63,6 +63,10 @@
 
                             <a class="dropdown-item" href="{{ route('themes') }}">
                                 Appearance
+                            </a>
+
+                            <a class="dropdown-item" href="{{ route('chatbot') }}">
+                                Chatbot
                             </a>
 
                             <div class="user-dropdown-divider"></div>

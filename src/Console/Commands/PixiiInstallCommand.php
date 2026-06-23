@@ -165,16 +165,21 @@ class PixiiInstallCommand extends Command
         $this->line('• DatabaseSeeder: ' . ($databaseSeederCreated ? 'created/updated' : 'not updated'));
         $this->line('• User model: ' . ($userModelCreated ? 'created/updated' : 'already exists'));
 
-        $this->printDatabaseSetupInstructions($databaseName, $databaseUser, $databasePassword);
-
         $this->newLine();
-        $this->warn('Next steps:');
-        $this->line('1) Open WSL and create the database using the SQL above.');
-        $this->line('2) npm install');
-        $this->line('3) php artisan migrate');
-        $this->line('4) php artisan db:seed');
-        $this->line('5) php artisan serve');
-        $this->line('6) npm run dev');
+        $this->warn('1) Manually update files:');
+        $this->line('👉  Add AI API keys to .env');
+        $this->newLine();
+        $this->printDatabaseSetupInstructions($databaseName, $databaseUser, $databasePassword);
+        $this->newLine();
+        $this->warn('3) Initialize the database and run:');
+        $this->line('👉 npm install');
+        $this->line('👉 php artisan migrate');
+        $this->line('👉 php artisan db:seed');
+        $this->line('👉 php artisan serve');
+        $this->line('👉 npm run dev');
+        $this->newLine();
+        $this->warn('4) Optional composer updates');
+        $this->line('👉 composer require laravel/ai');
 
         return self::SUCCESS;
     }
@@ -391,6 +396,7 @@ class PixiiInstallCommand extends Command
             $contents = $this->setEnvValue($contents, $key, $value);
         }
 
+        $contents = $this->ensureAiEnvSection($contents);
         $contents = $this->normalizeEnvSpacing($contents);
 
         File::put($path, $contents);
@@ -413,6 +419,46 @@ class PixiiInstallCommand extends Command
         }
 
         return rtrim($contents) . PHP_EOL . $line . PHP_EOL;
+    }
+
+    /**
+     * Ensure PixiiBomb AI environment keys exist.
+     *
+     * Existing values are preserved.
+     */
+    private function ensureAiEnvSection(string $contents): string
+    {
+        $aiDefaults = [
+            'OPENAI_API_KEY' => '',
+            'OPENAI_DEV_MODEL' => 'gpt-5.5-mini',
+            'OPENAI_PROD_MODEL' => 'gpt-5.5',
+        ];
+
+        $missing = array_filter($aiDefaults, function ($key) use ($contents) {
+            return !$this->envKeyExists($contents, $key);
+        }, ARRAY_FILTER_USE_KEY);
+
+        if (empty($missing)) {
+            return $contents;
+        }
+
+        $section = PHP_EOL . '# AI' . PHP_EOL;
+
+        foreach ($missing as $key => $value) {
+            $section .= $key . '=' . $value . PHP_EOL;
+        }
+
+        return rtrim($contents) . PHP_EOL . $section;
+    }
+
+    /**
+     * Determine whether an environment key already exists, even if commented out.
+     */
+    private function envKeyExists(string $contents, string $key): bool
+    {
+        $pattern = '/^#?\s*' . preg_quote($key, '/') . '=.*$/m';
+
+        return preg_match($pattern, $contents) === 1;
     }
 
     /**
@@ -445,13 +491,13 @@ class PixiiInstallCommand extends Command
      */
     private function printDatabaseSetupInstructions(string $databaseName, string $databaseUser, string $databasePassword): void
     {
-        $this->newLine();
-        $this->warn('Database setup SQL:');
-        $this->line('sudo mysql');
-        $this->line('CREATE DATABASE IF NOT EXISTS `' . $databaseName . '`;');
-        $this->line("CREATE USER IF NOT EXISTS '" . $databaseUser . "'@'localhost' IDENTIFIED BY '" . $databasePassword . "';");
-        $this->line("GRANT ALL PRIVILEGES ON `" . $databaseName . "`.* TO '" . $databaseUser . "'@'localhost';");
-        $this->line('FLUSH PRIVILEGES;');
+        $this->warn('2) Database setup SQL:');
+        $this->line('👉 Open WSL and create the database using the SQL below.');
+        $this->line("\tsudo mysql");
+        $this->line("\tCREATE DATABASE IF NOT EXISTS `{$databaseName}`;");
+        $this->line("\tCREATE USER IF NOT EXISTS '{$databaseUser}'@'localhost' IDENTIFIED BY '{$databasePassword}';");
+        $this->line("\tGRANT ALL PRIVILEGES ON `{$databaseName}`.* TO '{$databaseUser}'@'localhost';");
+        $this->line("\tFLUSH PRIVILEGES;");
     }
 
     /**

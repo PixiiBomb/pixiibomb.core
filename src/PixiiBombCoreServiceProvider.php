@@ -2,12 +2,12 @@
 
 namespace PixiiBomb\Core;
 
-use Illuminate\Support\Facades\Blade;
-use Illuminate\Support\Facades\Gate;
+use App\Models\User;
+use Illuminate\Support\Facades\{Blade, Gate};
 use Illuminate\Support\ServiceProvider;
-use PixiiBomb\Core\Models\Role;
-use PixiiBomb\Core\Policies\RolePolicy;
 use PixiiBomb\Core\Console\Commands\{PixiiCleanupCommand, PixiiInstallCommand, PixiiControllerCommand};
+use PixiiBomb\Core\Models\{Role, Theme};
+use PixiiBomb\Core\Policies\{RolePolicy, ThemePolicy, UserPolicy};
 use PixiiBomb\Core\Enums\Strings;
 
 /**
@@ -30,8 +30,6 @@ class PixiiBombCoreServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        Blade::componentNamespace('PixiiBomb\\Core\\View\\Components', Strings::PIXII->value);
-
         $this->registerDirectives();
         $this->registerVendorFiles();
         $this->registerCommands();
@@ -47,6 +45,8 @@ class PixiiBombCoreServiceProvider extends ServiceProvider
      */
     private function registerDirectives(): void
     {
+        Blade::componentNamespace('PixiiBomb\\Core\\View\\Components', Strings::PIXII->value);
+
         Blade::if(Strings::DEBUG->value, function() {
             return config('app.debug');
         });
@@ -118,6 +118,8 @@ class PixiiBombCoreServiceProvider extends ServiceProvider
     private function registerPolicies(): void
     {
         Gate::policy(Role::class, RolePolicy::class);
+        Gate::policy(Theme::class, ThemePolicy::class);
+        Gate::policy(User::class, UserPolicy::class);
     }
 
     /**

@@ -1,0 +1,43 @@
+#loading {
+    display: none;
+}
+
+#loading.show {
+    display: block;
+}
+
+#conversation,
+.conversation-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-lg);
+}
+
+.user-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex: 1 1 100%;
+}
+
+.chatbot-container {
+    display: block;
+    width: 100%;
+}
+
+.uin {
+    display: flex;
+    flex: 0 0 60%;
+    padding: var(--padding);
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+    color: var(--color-text-primary);
+    background: linear-gradient(
+        135deg,
+        color-mix(in srgb, var(--color-primary) 65%, transparent),
+        color-mix(in srgb, var(--color-primary-60) 80%, transparent)
+    );
+    border-radius: var(--radius-lg);
+    border-bottom-right-radius: 0;
+    box-shadow: 0 0.75rem 2rem color-mix(in srgb, var(--color-primary) 18%, transparent);
+}

@@ -214,7 +214,6 @@ class Page
     {
         foreach ($stylesheets as $stylesheet) {
             $relativePath = $this->getStylesheetRelativePath($stylesheet);
-
             if (! is_null($relativePath) && ! in_array($relativePath, $this->stylesheets, true)) {
                 $this->stylesheets[] = $relativePath;
             }

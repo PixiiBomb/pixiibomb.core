@@ -18,7 +18,8 @@ return new class extends Migration
                 ->nullable()
                 ->after('id')
                 ->constrained('roles')
-                ->nullOnDelete();
+                ->cascadeOnUpdate()
+                ->restrictOnDelete();
 
             /*
              * Relative path to the user's avatar image.

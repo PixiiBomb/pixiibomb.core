@@ -3,11 +3,12 @@
 namespace PixiiBomb\Core\Controllers\Api;
 
 use App\Models\User;
-use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Gate;
+use Illuminate\Http\{JsonResponse, Request};
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\ValidationException;
-use PixiiBomb\Core\Schemas\UserSchema;
+use PixiiBomb\Core\Enums\Action;
+use PixiiBomb\Core\Validation\UserValidation;
 
 class UserController extends ApiController
 {
@@ -16,14 +17,14 @@ class UserController extends ApiController
         return User::class;
     }
 
-    protected function schema(): string
+    protected function validator(): string
     {
-        return UserSchema::class;
+        return UserValidation::class;
     }
 
     public function create(Request $request): JsonResponse
     {
-        $data = $this->validated($request, 'create');
+        $data = $this->validate($request, Action::CREATE);
 
         if (User::query()->where('email', $data['email'])->exists()) {
             throw ValidationException::withMessages([
@@ -87,16 +88,26 @@ class UserController extends ApiController
 
     public function patchAvatar(Request $request, int|string $id): JsonResponse
     {
-        $user = User::query()->findOrFail($id);
+        $user = $this->findRecordOrFail($this->model(), $id);
 
-        $data = $this->validated($request, 'avatar');
+        Gate::authorize('update', $user);
+
+        $this->validate($request, Action::PATCH, ['avatar']);
+
+        if (!$request->hasFile('avatar')) {
+            abort(response()->json([
+                'error' => 'No avatar file was uploaded.',
+            ], 422));
+        }
+
+        $path = $request->file('avatar')->store('avatars', 'public');
 
         $user->update([
-            'avatar' => $data['avatar'],
+            'avatar' => $path,
         ]);
 
         return response()->json([
             'data' => $user->fresh(),
-        ]);
+        ], 200);
     }
 }

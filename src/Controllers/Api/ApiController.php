@@ -7,7 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
-use PixiiBomb\Core\Validation\SchemaValidation;
+use Illuminate\Support\Facades\Validator;
+use PixiiBomb\Core\Enums\Action;
 
 /**
  * Base controller for PixiiBomb REST-style API resources.
@@ -23,7 +24,7 @@ use PixiiBomb\Core\Validation\SchemaValidation;
  *
  * Child controllers define:
  *  - Model
- *  - FormRequest mappings
+ *  - Validator mappings
  */
 abstract class ApiController extends Controller
 {
@@ -35,11 +36,11 @@ abstract class ApiController extends Controller
     abstract protected function model(): string;
 
     /**
-     * Get the schema class this controller manages.
+     * Get the validator class this controller manages.
      *
      * @return class-string
      */
-    abstract protected function schema(): string;
+    abstract protected function validator(): string;
 
     /**
      * Get one record by id.
@@ -47,13 +48,13 @@ abstract class ApiController extends Controller
     public function get(int|string $id): JsonResponse
     {
         $model = $this->model();
-        $record = $model::query()->findOrFail($id);
+        $record = $this->findRecordOrFail($model, $id);
 
         Gate::authorize('get', $record);
 
         return response()->json([
             'data' => $record,
-        ]);
+        ], 200);
     }
 
     /**
@@ -67,7 +68,7 @@ abstract class ApiController extends Controller
 
         return response()->json([
             'data' => $model::query()->get(),
-        ]);
+        ], 200);
     }
 
     /**
@@ -80,7 +81,7 @@ abstract class ApiController extends Controller
         Gate::authorize('create', $model);
 
         $record = $model::query()->create(
-            $this->validated($request, 'create')
+            $this->validate($request, Action::CREATE)
         );
 
         return response()->json([
@@ -94,15 +95,15 @@ abstract class ApiController extends Controller
     public function update(Request $request, int|string $id): JsonResponse
     {
         $model = $this->model();
-        $record = $model::query()->findOrFail($id);
+        $record = $this->findRecordOrFail($model, $id);
 
         Gate::authorize('update', $record);
 
-        $record->update($this->validated($request, 'update'));
+        $record->update($this->validate($request, Action::UPDATE));
 
         return response()->json([
             'data' => $record->fresh(),
-        ]);
+        ], 200);
     }
 
     /**
@@ -111,15 +112,15 @@ abstract class ApiController extends Controller
     public function patch(Request $request, int|string $id): JsonResponse
     {
         $model = $this->model();
-        $record = $model::query()->findOrFail($id);
+        $record = $this->findRecordOrFail($model, $id);
 
         Gate::authorize('update', $record);
 
-        $record->update($this->validated($request, 'patch'));
+        $record->update($this->validate($request, Action::PATCH));
 
         return response()->json([
             'data' => $record->fresh(),
-        ]);
+        ], 200);
     }
 
     /**
@@ -128,7 +129,7 @@ abstract class ApiController extends Controller
     public function delete(int|string $id): JsonResponse
     {
         $model = $this->model();
-        $record = $model::query()->findOrFail($id);
+        $record = $this->findRecordOrFail($model, $id);
 
         Gate::authorize('delete', $record);
 
@@ -136,7 +137,8 @@ abstract class ApiController extends Controller
 
         return response()->json([
             'ok' => true,
-        ]);
+            'deleted' => $record,
+        ], 204);
     }
 
     /**
@@ -159,12 +161,28 @@ abstract class ApiController extends Controller
     /**
      * Validate the request using the FormRequest mapped to the given action.
      */
-    protected function validated(Request $request, string $action): array
+    protected function validate(Request $request, Action $action, ?array $only = null): array
     {
-        return SchemaValidation::validate(
-            $this->schema(),
+        $validation = $this->validator();
+
+        return Validator::make(
             $request->all(),
-            $action
-        );
+            $validation::rules($action, $only)
+        )->validate();
+    }
+
+    protected function findRecordOrFail(string $model, int|string $id): Model
+    {
+        $record = $model::query()->find($id);
+
+        if (! $record) {
+            $table = (new $model)->getTable();
+
+            abort(response()->json([
+                'error' => "The `$table` table does not contain a record with id: $id.",
+            ], 404));
+        }
+
+        return $record;
     }
 }
